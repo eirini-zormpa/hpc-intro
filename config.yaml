@@ -65,8 +65,10 @@ contact: 'e.zormpa@imperial.ac.uk'
 
 # Order of episodes in your lesson
 episodes:
-- why-hpc.md
-- what-is-hpc.md
+- 1-why-hpc.md
+- 2-what-is-hpc.md
+- 3-hpc-workflow.md
+- 4-responsible-hpc.md
 
 # Information for Learners
 learners:

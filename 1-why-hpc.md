@@ -58,20 +58,38 @@ Let's now look at some specific cases in which the use of an HPC cluster enabled
 
 ### Case study 1: Physics
 
-<!-- to include for each
-1. introduction
-2. how is HPC implicated?
-3. why does this work matter?
-4. sources
--->
+Most of us will remember the excitement that surrounded the release of the first image of a black hole, located in the centre of the M87 galaxy, captured in 2019.
+Although not as widely publicised, an image of SgrA*, the black hole in the centre of our own galaxy, was also captured in 2022.
+HPC underlies multiple of the steps involved in creating these images,
+images which provide strong evidence for Einstein's theory of general relativity and have implications for understanding of the universe.
 
-Most of us will remember the first image of a black hole, which was captured in 2019.
-This would not have been possible without HPC!
-Scientists collected data using eight telescopes located around the world, which were then transferred to two supercomputers for processing.
-The superior processing power of the two supercomputers made it possible to combine the data from all eight telescopes at high speeds.
+#### Why study black holes in the first place?
 
-- [Source 1](https://prace-ri.eu/hpc-supports-first-black-hole-image/)
-- [Source 2](https://eventhorizontelescope.org/technology)
+Black holes are extreme regions of space, where it would appear that both general relativity and quantum physics play a role.
+As such, they can serve as laboratories for testing these fundamental theories that explain how the universe works on the largest and the smallest scales.
+At the moment, each of these theories works well in its respective regime, but physicists currently do not understand how to create a single physical theory that would be universal and, hence, explain the physics of black holes in detail.
+With the Event Horizon Telescope (EHT) results, scientists are able to directly resolve the conditions of spacetime at the black hole boundary.
+
+There are also ways in which these achievements matter on top of their contributions to the field of astrophysics.
+Black holes tend to capture the public imagination in way that not many scientific fields can.
+The palpable excitement around these developments can engage the public with science and help foster a trust in experts that has been declining.
+It is also reassuring to see large-scale collaborations of an international scale: this work involved over 200 researchers and 8 telescopes across the globe.
+
+#### How did HPC contribute?
+HPC was essential at every stage of the project.
+EHT is a global network of radio observatories operating together through a technique called very-long-baseline interferometry (VLBI).
+By synchronising telescopes across the Earth with atomic clocks, the EHT effectively created a virtual telescope the size of the Earth, capable of achieving the extraordinary resolution needed to image the black holes at the centre of M87 and our own Millky Way.
+This generated petabytes of raw data that were transported to and processed by highly specialised supercomputers.
+HPC systems combined and calibrated the data from multiple telescopes, reconstructed images from sparse and noisy measurements, and compared the results against extensive libraries of astrophysical simulations that modeled black holes, magnetic fields, and relativistic plasma flows.
+Independent teams also used different computational imaging methods to verify that the observed ring structure was real and not an artifact of processing.
+To bring to life the magnitude of computing power required for this, one of the analyses presented for SgrA* required 100 CPU hours, spread across two supercomputers
+
+#### Sources and further reading
+- Why is it important to study black holes? What is there to learn from the EHT observations?[Linke to the Event Horizon Telescape FAQ](https://eventhorizontelescope.org/faq/why-it-important-study-black-holes-what-there-be-learned-eht-observations)
+- Press release (April 10, 2019): Astronomers Capture First Image of a Black Hole [link to press release on EHT website](https://eventhorizontelescope.org/press-release-april-10-2019-astronomers-capture-first-image-black-hole)
+- HPC supports first black hole image [link to Partnership for Advanced Computing in Europe (PRACE) website](https://prace-ri.eu/hpc-supports-first-black-hole-image/)
+- Event Horizon Telescope Technology [Link to the EHT website on Technology topics](https://eventhorizontelescope.org/technology)
+- We got it! Astronomers reveal first image of the black hole at the heart of our galaxy [link to NSF website](https://www.nsf.gov/news/we-got-it-astronomers-reveal-first-image-black-hole-heart)
 
 ### Case study 2: Engineering
 Researchers from Queen's University Belfast are using HPC to model the performance of offshore and coastal structures.
