@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://eirini-zormpa.github.io/hpc-intro/1-why-hpc.html</loc>
+  </url>
+  <url>
+    <loc>https://eirini-zormpa.github.io/hpc-intro/2-what-is-hpc.html</loc>
+  </url>
+  <url>
+    <loc>https://eirini-zormpa.github.io/hpc-intro/3-hpc-workflow.html</loc>
+  </url>
+  <url>
+    <loc>https://eirini-zormpa.github.io/hpc-intro/4-responsible-hpc.html</loc>
+  </url>
+  <url>
     <loc>https://eirini-zormpa.github.io/hpc-intro/404.html</loc>
   </url>
   <url>
@@ -23,6 +35,18 @@
   </url>
   <url>
     <loc>https://eirini-zormpa.github.io/hpc-intro/index.html</loc>
+  </url>
+  <url>
+    <loc>https://eirini-zormpa.github.io/hpc-intro/instructor/1-why-hpc.html</loc>
+  </url>
+  <url>
+    <loc>https://eirini-zormpa.github.io/hpc-intro/instructor/2-what-is-hpc.html</loc>
+  </url>
+  <url>
+    <loc>https://eirini-zormpa.github.io/hpc-intro/instructor/3-hpc-workflow.html</loc>
+  </url>
+  <url>
+    <loc>https://eirini-zormpa.github.io/hpc-intro/instructor/4-responsible-hpc.html</loc>
   </url>
   <url>
     <loc>https://eirini-zormpa.github.io/hpc-intro/instructor/404.html</loc>
