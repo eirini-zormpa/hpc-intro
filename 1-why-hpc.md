@@ -36,7 +36,7 @@ Processing huge datasets or running calculations of this complexity requires a l
 
 To get around this problem, researchers may turn to High-Performance Computing (HPC) which refers to the use of powerful computers and programming techniques to solve computationally-intensive tasks.
 HPC can refer to custom-built *supercomputers* or groups of individual computers that are connected together in a network and work as a unified system, forming a *cluster*.
-We call these indivisual computers of a cluster *nodes*.
+We call these individual computers of a cluster *nodes*.
 To give a taste of the benefit of using HPC over a regular computer, let's look at an example:
 A PhD student wants to cross-validate a statistical model 1,000 times.
 Running the model once on a laptop once takes one hour, meaning that cross-validating it 1,000 times would take over a month!
@@ -61,35 +61,35 @@ Let's now look at some specific cases in which the use of an HPC cluster enabled
 Most of us will remember the excitement that surrounded the release of the first image of a black hole, located in the centre of the M87 galaxy, captured in 2019.
 Although not as widely publicised, an image of SgrA*, the black hole in the centre of our own galaxy, was also captured in 2022.
 HPC underlies multiple of the steps involved in creating these images,
-images which provide strong evidence for Einstein's theory of general relativity and have implications for understanding of the universe.
+images which provide strong evidence for Einstein's theory of general relativity and have implications for our understanding of the universe.
 
-#### Why study black holes in the first place?
+#### Why does it matter?
 
 Black holes are extreme regions of space, where it would appear that both general relativity and quantum physics play a role.
-As such, they can serve as laboratories for testing these fundamental theories that explain how the universe works on the largest and the smallest scales.
+As such, they can serve as laboratories for testing these fundamental theories that explain how the universe works on the largest and on the smallest scales.
 At the moment, each of these theories works well in its respective regime, but physicists currently do not understand how to create a single physical theory that would be universal and, hence, explain the physics of black holes in detail.
 With the Event Horizon Telescope (EHT) results, scientists are able to directly resolve the conditions of spacetime at the black hole boundary.
 
 There are also ways in which these achievements matter on top of their contributions to the field of astrophysics.
 Black holes tend to capture the public imagination in way that not many scientific fields can.
 The palpable excitement around these developments can engage the public with science and help foster a trust in experts that has been declining.
-It is also reassuring to see large-scale collaborations of an international scale: this work involved over 200 researchers and 8 telescopes across the globe.
+
 
 #### How did HPC contribute?
 HPC was essential at every stage of the project.
 EHT is a global network of radio observatories operating together through a technique called very-long-baseline interferometry (VLBI).
-By synchronising telescopes across the Earth with atomic clocks, the EHT effectively created a virtual telescope the size of the Earth, capable of achieving the extraordinary resolution needed to image the black holes at the centre of M87 and our own Millky Way.
+By synchronising telescopes across the Earth with atomic clocks, the EHT effectively created a virtual telescope the size of the Earth, capable of achieving the extraordinary resolution needed to image the black holes at the centre of M87 and our own Milky Way.
 This generated petabytes of raw data that were transported to and processed by highly specialised supercomputers.
 HPC systems combined and calibrated the data from multiple telescopes, reconstructed images from sparse and noisy measurements, and compared the results against extensive libraries of astrophysical simulations that modeled black holes, magnetic fields, and relativistic plasma flows.
 Independent teams also used different computational imaging methods to verify that the observed ring structure was real and not an artifact of processing.
-To bring to life the magnitude of computing power required for this, one of the analyses presented for SgrA* required 100 CPU hours, spread across two supercomputers
+To bring to life the magnitude of computing power required for this, one of the analyses presented for SgrA* required 100 CPU hours, spread across two supercomputers.
 
 #### Sources and further reading
-- Why is it important to study black holes? What is there to learn from the EHT observations?[Linke to the Event Horizon Telescape FAQ](https://eventhorizontelescope.org/faq/why-it-important-study-black-holes-what-there-be-learned-eht-observations)
-- Press release (April 10, 2019): Astronomers Capture First Image of a Black Hole [link to press release on EHT website](https://eventhorizontelescope.org/press-release-april-10-2019-astronomers-capture-first-image-black-hole)
-- HPC supports first black hole image [link to Partnership for Advanced Computing in Europe (PRACE) website](https://prace-ri.eu/hpc-supports-first-black-hole-image/)
-- Event Horizon Telescope Technology [Link to the EHT website on Technology topics](https://eventhorizontelescope.org/technology)
-- We got it! Astronomers reveal first image of the black hole at the heart of our galaxy [link to NSF website](https://www.nsf.gov/news/we-got-it-astronomers-reveal-first-image-black-hole-heart)
+- Why is it important to study black holes? What is there to learn from the EHT observations? ([link to the Event Horizon Telescape FAQ](https://eventhorizontelescope.org/faq/why-it-important-study-black-holes-what-there-be-learned-eht-observations))
+- Press release (April 10, 2019): Astronomers Capture First Image of a Black Hole ([link to press release on EHT website](https://eventhorizontelescope.org/press-release-april-10-2019-astronomers-capture-first-image-black-hole))
+- HPC supports first black hole image ([link to Partnership for Advanced Computing in Europe (PRACE)) website](https://prace-ri.eu/hpc-supports-first-black-hole-image/)
+- Event Horizon Telescope Technology ([link to the EHT website on Technology topics](https://eventhorizontelescope.org/technology))
+- We got it! Astronomers reveal first image of the black hole at the heart of our galaxy ([link to NSF website](https://www.nsf.gov/news/we-got-it-astronomers-reveal-first-image-black-hole-heart))
 
 ### Case study 2: Engineering
 Researchers from Queen's University Belfast are using HPC to model the performance of offshore and coastal structures.
@@ -108,6 +108,7 @@ Proteins underpin life.
 Although proteins can be represented as a linear sequence of amino acids, their function depends on how they fold, i.e. their precise 3D structure.
 Insights into the structure, and thus the function of a protein is critical for understanding biological processes, from diseases that affect humans to bacteria that are found in our environment.
 Understanding these processes can then be used in a wide range of applications, from drug discovery to fighting environmental pollution.
+Indeed, the scientific breakthroughs that AlphaFold has enabled have contributed to combatting antibiotic resistance, developing malaria treatments, and creating enzymes to fight plastic pollution.
 
 The first time a protein's structure was determined was back in 1958.
 Since then, scientists have used experimental methods to uncover protein structure.
@@ -133,21 +134,79 @@ Training such a model requires processing large biological datasets and iterativ
 In practice, this meant running training jobs across 8 GPUs in parallel over hundreds of thousands of training steps.
 Even with this level of parallelism, a single training run took about 5 days to complete.
 
-In this context, HPC was not simply accelerating an existing workflow; it enabled a fundamentally more powerful modelling approach.
-Without access to parallel GPU computing and large-scale training infrastructure, it would not have been practical to train such deep, data-intensive networks or to iterate on their design.
-This level of computational capability was a key factor in allowing AlphaFold to reach near-experimental accuracy and move protein structure prediction from a long-standing challenge to a routinely solvable problem.
-The scientific breakthroughs that AlphaFold has enabled have contributed to combatting antibiotic resistance, developing malaria treatments, and creating enzymes to fight plastic pollution
-
 #### Sources and further reading
+
 - Improved protein structure prediction using potentials from deep learning ([link to academic publication on AlphaFold 2](https://doi.org/10.1038/s41586-019-1923-7))
 - AlphaFold uses open data and AI to discover the 3D protein universe ([link to blog post on EMBL.org](https://www.embl.org/news/science/alphafold-using-open-data-and-ai-to-discover-the-3d-protein-universe))
 - Open access to predicted proteins via AlphaFold Protein Structure Database ([link to EMBL-EBI database](https://alphafold.ebi.ac.uk/))
 - Online training on AlphaFold ([link to EMBL-EBI training](https://www.ebi.ac.uk/training/online/courses/alphafold/))
 
-### Case study 4: Archaelogy
-Researchers at the University of Bradford used their local HPC cluster to recreate 3D models of degraded sites.
+### Case study 4: Digital Humanities
+Living with Machines was a research project studying the first industrial revolution, which took place in Britain roughly in the 19th century.
+The project used massive digitised historical collections and computational analytical tools to examine the human, social and cultural consequences of this historical movement.
 
-[Source](https://www.techmonitor.ai/technology/data/university-of-bradford-hpc?cf-view)
+#### Why does it matter?
+The Industrial Revolution is a period of history that is hugely important to Britain, but also had world-wide consequences.
+Gaining more insight into how it affected people and places is valuable historical work.
+
+The central theme of the Living with Machines project is the mechanisation of work practices.
+This is a topic that speaks directly to present debates about how society can accommodate the revolutionary consequences of AI.
+To understand the fraught co-existence of human and machine, this project contends that we need research methods that combine technological innovation and human expertise.
+
+The tools that the Living with Machines project created can be used in other areas within and outside of Digital Humanities.
+These include tools for parsing maps, matching "fuzzy" words that have been scanned, and models that can read 19th-century English.
+
+#### How did HPC contribute?
+
+Living with Machines encompassed a large number of projects, many of which used HPC and some that did not.
+Below we explore three tools that were developed as part of the project which did use HPC.
+
+##### MapReader
+
+The first tool we'll look at is `MapReader`, a free open-source Python library using computer vision methods to analyse scanned or born-digital maps.
+One of the innovations introduced by this tool is that annotation was carried out not at the level of the pixel, but rather of the "patch", a flexible and meaningful semantic unit. 
+
+HPC was already used in the creation of the dataset that was used to train and evaluate the model.
+This data is 16,439 scanned Ordnance Survey map sheets at 1:10,560 scale, surveyed between ca. 1890 and the beginning of WWI.
+The size of the dataset was about 600Gb and it took about 32 hours on 6 cores to slice it into 30.5 million patches.
+
+Of interest to the researchers in this case was the categorisation of patches as containing rail infrastructure versus buildings.
+A subset of 62,020 manually annotated patches was used to train, validate, and test different models.
+After a model was selected and finetuned, it was used for model inference on all 30,490,411 patches in the UK.
+This took four NVIDIA Tesla K80 GPUs approximately 172 GPU hours.
+
+##### DeezyMatch
+
+`DeezyMatch` is also a free open-source Python library, this one used for string matching in historical documents.
+*String matching* refers to the process of matching strings (words) to a knowledge base to facilitate Natural Language Processing (NLP).
+This can be difficult to do well in historical documents because of the diversity in the appearance of the same word in different contexts.
+For example, scans of a word handwritten in cursive or printed on degraded paper will look different to how that word is stored in a database.
+Adding to that changes and inconsistencies in spelling  and the use of characters have since fallen out of favour and the picture becomes very complex.
+
+`DeezyMatch` uses different types of deep neural networks, the hyperparameters of which can be configured without the code needing to be modified.
+It also does not require a model to be trained from scratch, but rather finetune a model that has already been trained, which is useful in cases where limited training examples are available.
+HPC was used to preprocess data and train models (28 GPU or 54 CPU minutes) and to generate and combine candidate vectors (39 GPU or 204 CPU minutes).
+
+##### Neural language models for 19th century English
+
+Living with Machines also released four types of neural language models trained on 19th century English.
+The data used for this was 47,685 books published between 1760 and 1900.
+The text of the books was preprocessed, separated into sentences and tokenised into 5.1 billion tokens (essentially words).
+
+One of the models that was trained, BERT, was used in downstream tasks.
+One of these tasks was detecting atypical animacy, i.e. exploring how animate people considered machines.
+In this context, BERT was also used to study metaphorical language.
+Another application was the disambiguation of words with multiple meanings.
+
+#### Sources and further reading
+
+- Living with Machines ([link to the Living with Machines 'About' page](https://livingwithmachines.ac.uk/about/))
+- MapReader: A Computer Vision Pipeline for the Semantic Exploration of Maps at Scale ([link to publication](https://doi.org/10.48550/arXiv.2111.15592))
+- DeezyMatch: A Flexible Deep Learning Approach to Fuzzy String Matching ([link to publication](https://aclanthology.org/2020.emnlp-demos.9.pdf))
+- Neural Language Models for Nineteenth-Century English ([link to publication](https://doi.org/10.48550/arXiv.2105.11321))
+- Living Machines: A study of *atypical* animacy ([link to publication](https://aclanthology.org/2020.coling-main.400.pdf))
+- The Living Machine: A Computational Approach to the Nineteenth-Century Language of Technology ([link to publication](https://muse.jhu.edu/pub/1/article/903976))
+- When Time Makes Sense: A Historically-Aware Approach to Targeted Sense Disambiguation ([link to publication](https://aclanthology.org/2021.findings-acl.243.pdf))
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
