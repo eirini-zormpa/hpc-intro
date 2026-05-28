@@ -29,4 +29,5 @@ exercises: 10
 ### The challenge
 
 ### Steps to mitigate impact
+
 See: https://imperialcollegelondon.github.io/digital_research_sustainability_training/index.html
