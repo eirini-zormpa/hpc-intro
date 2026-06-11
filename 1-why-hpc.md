@@ -74,6 +74,9 @@ There are also ways in which these achievements matter beyond their contribution
 Black holes tend to capture the public imagination in a way that not many scientific fields can.
 The palpable excitement around these developments can engage the public with science and help foster a trust in experts that has been declining.
 
+![Image of the black hole SgrA*, from the [Event Horizon Telescope website.](https://eventhorizontelescope.org/blog/astronomers-reveal-first-image-black-hole-heart-our-galaxy)](files/black-hole-sgra.png)
+
+
 #### How did HPC contribute?
 HPC was essential at every stage of the project.
 EHT is a global network of radio observatories operating together through a technique called very-long-baseline interferometry (VLBI).
@@ -91,7 +94,7 @@ To bring to life the magnitude of computing power required for this, one of the 
 - We got it! Astronomers reveal first image of the black hole at the heart of our galaxy ([link to NSF website](https://www.nsf.gov/news/we-got-it-astronomers-reveal-first-image-black-hole-heart))
 
 
-### Case study 3: Biology
+### Case study 2: Biology
 Another well-publicised piece of research that made heavy use of HPC is AlphaFold.
 AlphaFold is an AI programme that is highly accurate in predicting the 3D structure of proteins.
 
@@ -110,6 +113,9 @@ This may sound like a large number, but it pales in comparison to the number of 
 Naturally, computational prediction of protein structure had also been attempted; an international competition was even set up in 1994 with the goal of advancing the methods of identifying protein structure from sequence.
 At the 14th iteration of the competition, in 2020, there was a breakthrough.
 The AlphaFold 2 system was announced as being equally accurate to experimental methods.
+
+![An artist's illustration of AI used in protein folding [Google DeepMind on Unsplash.](https://unsplash.com/photos/an-image-of-a-cell-phone-with-a-blue-background-htMw1CbMUIk)](files/ai-protein.jpg)
+
 
 #### How did HPC contribute?
 The use of HPC was fundamental in the development of AlphaFold and remains important for its use.
@@ -133,7 +139,7 @@ Even with this level of parallelism, a single training run took about 5 days to 
 - Open access to predicted proteins via AlphaFold Protein Structure Database ([link to EMBL-EBI database](https://alphafold.ebi.ac.uk/))
 - Online training on AlphaFold ([link to EMBL-EBI training](https://www.ebi.ac.uk/training/online/courses/alphafold/))
 
-### Case study 4: Digital Humanities
+### Case study 3: Digital Humanities
 Living with Machines was a research project studying the first industrial revolution, which took place in Britain roughly in the 19th century.
 The project used massive digitised historical collections and computational analytical tools to examine the human, social and cultural consequences of this historical movement.
 
@@ -147,6 +153,8 @@ To understand the fraught co-existence of human and machine, this project conten
 
 The tools that the Living with Machines project created can be used in other areas within and outside of Digital Humanities.
 These include tools for parsing maps, matching "fuzzy" words that have been scanned, and models that can read 19th-century English.
+
+![D. Napier & Son Ltd, 'Aero Engine in the Making', England, circa 1918. [Shared by Museums Victoria on Unsplash](https://unsplash.com/photos/grayscale-photography-of-man-facing-mechanical-machine-9Prj6M-JAaA)](files/industrial-revolution.jpg)
 
 #### How did HPC contribute?
 
