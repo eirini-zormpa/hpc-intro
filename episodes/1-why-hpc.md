@@ -90,13 +90,6 @@ To bring to life the magnitude of computing power required for this, one of the 
 - Event Horizon Telescope Technology ([link to the EHT website on Technology topics](https://eventhorizontelescope.org/technology))
 - We got it! Astronomers reveal first image of the black hole at the heart of our galaxy ([link to NSF website](https://www.nsf.gov/news/we-got-it-astronomers-reveal-first-image-black-hole-heart))
 
-### Case study 2: Engineering
-Researchers from Queen's University Belfast are using HPC to model the performance of offshore and coastal structures.
-This work places special emphasis on the behaviour of floating wind turbines, which are used to generate renewable energy.
-Wind turbines that are further away from the coast benefit from, for example, stronger and more consistent wind, but their stability can suffer from the more adverse weather.
-Modelling the various factors and their interactions that can affect their stability would be impossible without HPC infrastructure.
-
-[Source](https://ni-hpc.ac.uk/CaseStudies/WindTurbineModelling/#d.en.1380908)
 
 ### Case study 3: Biology
 Another well-publicised piece of research that made heavy use of HPC is AlphaFold.
