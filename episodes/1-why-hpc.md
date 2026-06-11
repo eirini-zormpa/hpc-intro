@@ -67,13 +67,12 @@ images which provide strong evidence for Einstein's theory of general relativity
 
 Black holes are extreme regions of space, where it would appear that both general relativity and quantum physics play a role.
 As such, they can serve as laboratories for testing these fundamental theories that explain how the universe works on the largest and on the smallest scales.
-At the moment, each of these theories works well in its respective regime, but physicists currently do not understand how to create a single physical theory that would be universal and, hence, explain the physics of black holes in detail.
+At the moment, both theories work well in their respective scopes, but physicists currently do not understand how to create a single theory that would be universal and, hence, explain the physics of black holes in detail.
 With the Event Horizon Telescope (EHT) results, scientists are able to directly resolve the conditions of spacetime at the black hole boundary.
 
-There are also ways in which these achievements matter on top of their contributions to the field of astrophysics.
-Black holes tend to capture the public imagination in way that not many scientific fields can.
+There are also ways in which these achievements matter beyond their contributions to the field of astrophysics.
+Black holes tend to capture the public imagination in a way that not many scientific fields can.
 The palpable excitement around these developments can engage the public with science and help foster a trust in experts that has been declining.
-
 
 #### How did HPC contribute?
 HPC was essential at every stage of the project.
@@ -192,11 +191,20 @@ HPC was used to preprocess data and train models (28 GPU or 54 CPU minutes) and 
 Living with Machines also released four types of neural language models trained on 19th century English.
 The data used for this was 47,685 books published between 1760 and 1900.
 The text of the books was preprocessed, separated into sentences and tokenised into 5.1 billion tokens (essentially words).
+The model we will look at here was BERT, which was trained on 4 NVIDIA Tesla K80 GPUs in parallel.
 
-One of the models that was trained, BERT, was used in downstream tasks.
+One of the models that was trained, BERT, was used in a range of tasks later on.
 One of these tasks was detecting atypical animacy, i.e. exploring how animate people considered machines.
-In this context, BERT was also used to study metaphorical language.
-Another application was the disambiguation of words with multiple meanings.
+The method went as follows:
+1. extract high-quality sentences from a varied and representative corpus of texts from the long 19th century that use the word "machine".
+2. mask the word "machine" and use a neural language model trained in 19th century English to predict the masked word
+3. calculate an animacy score for the masked word from the predictions of the language model
+
+Variants of this approach include annotating sentences for "humanness" (an attribute related to, but distinct from animacy) and comparing the predictions that models trained on texts from different times make (i.e. from pre 1850, 1850-1875, 1875-1890, 1890-1900, and contemporary).
+
+On a basic level, this line of inquiry can capture the implicit and changing attitudes to who is expected to do different types of work and the changing senses of ambiguous words across time.
+On a deeper level, it can tell us about how animate and/or human machines were perceived to be, with implications about how much empathy people might extend to them.
+Interestingly, but perhaps not surprisingly, in contexts that were annotated as high in animacy but low in humanness, the 19th century models would sometimes predict the word "slave" instead of "machine" or "man".
 
 #### Sources and further reading
 
