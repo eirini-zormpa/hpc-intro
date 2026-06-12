@@ -246,7 +246,29 @@ Interestingly, but perhaps not surprisingly, in contexts that were annotated as 
 
 ::::::::::::::::::::::::::::::::::::: callout
 
-High-Performance Computing and Artificial Intelligence
+## High-Performance Computing and Artificial Intelligence
+
+Before we get into how HPC and AI relate to one another, let's establish what we mean by "AI".
+Since ChatGPT was publicly launched in November 2022, the term "AI" tends to refer to generative AI chatbots, like ChatGPT and Claude.
+More generally, AI is a field of computer science working on developing start machines that can perform tasks that would normally require human intelligence.
+As such, "AI" is used to refer to the most advanced algorithms that can perform such tasks.
+
+Before 2022, AI usually referred to Machine Learning.
+Machine Learning is a subset of artificial intelligence that automatically enables a machine or system to learn and improve from experience.
+Instead of explicit programming, machine learning uses algorithms to analyse large amounts of data, learn from the insights, and then make informed decisions. 
+Machine learning algorithms improve performance over time as they are trained—exposed to more data.
+Machine learning models are the output, or what the program learns from running an algorithm on training data.
+The more data used, the better the model will get. 
+
+*Source: [Google Cloud](https://cloud.google.com/learn/artificial-intelligence-vs-machine-learning)*
+
+At the time of writing (in 2026), the prevailing meaning of AI is generative AI.
+Generative models are used to, as the name suggests, generate - that can be text, images, videos etc.
+Generative AI became possible with the creation of deep neural networks (a type of machine learning) and particularly Large Language Models (LLMs) which rely on the transformer architecture.
+
+Modern AI methods (be it machine learning models or generative models) tend to be both data- and compute-intensive, requiring appropriate infrastructure.
+Often, this infrastructure is an HPC cluster.
+As such AI and HPC are in a symbiotic relationship, where AI methods require HPC infrastructure to be implemented on the scale we see today and HPC is experiencing growth due to the pervasiveness and large compute demands of AI.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
