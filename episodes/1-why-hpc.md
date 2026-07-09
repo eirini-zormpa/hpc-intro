@@ -26,31 +26,49 @@ What Digital Research Infrastructure facilities are you aware of in your institu
 
 :::::::::::::::::::::::::::::::::
 
-Scientific research is becoming increasingly computational [(Foster, 2011)](https://doi.org/10.7208/9780226038322-002).
-Think, for example, of huge text datasets that comprise the entirety of Wikipedia or Reddit, or of sensor data from structures like bridges and tunnels, containing information on vibrations, seismic activity etc.
-To make this more concrete, let's look at some studies that have tried to quantify this change:
-One study looking at the size of medical image datasets used for research found that the median dataset size in 2018 was up to 10 times larger compared to 2011 ([Kiryati & Landau, 2021](https://doi.org/10.3390/jimaging7080155)).
-Another study looking at big data in industry and academia, reports that the data that CERN records in a year is projected to increase from 160 petabytes in 2018 to 800 petabytes in 2026 ([Clissa, Lassnig, & Rinaldi, 2023](https://doi.org/10.3389/fdata.2023.1271639)).
-Or, think of the hugely complicated climate models that scientists run to predict the impacts of the climate crisis.
-Processing huge datasets or running calculations of this complexity requires a lot of computing power, more than an individual laptop or work station can provide.
+Scientific research is becoming increasingly computational, relying on large datasets and advanced computing power [(Foster, 2011)](https://doi.org/10.7208/9780226038322-002).
+This feels intuitively true, but it has also been verified by studies which have tried to quantify this change:
+One study looking at the size of medical image datasets used for research found that the size of the median dataset in 2018 was up to 10 times larger compared to 2011 ([Kiryati & Landau, 2021](https://doi.org/10.3390/jimaging7080155)).
+Another study, looking at big data in industry and academia, expects the data that CERN records in a year to increase from 160 petabytes in 2018 to 800 petabytes in 2026, a more than fourfold increase of an already huge amount of data ([Clissa, Lassnig, & Rinaldi, 2023](https://doi.org/10.3389/fdata.2023.1271639)).
+In addition to ever-growing dataset size, scientists are also increasingly turning to computational methods.
+For example, biology used to be a discipline based exclusively in a wet lab, but bioinformatics over the last few decades has become a substantial percentage of biological research.
+Or, think of meteorology - people have been trying to predict the weather for millenia, but doing so as accurately as we can now is only possible because of big data and highly complex models.
+These advances in data size and calculation complexity require _a lot_ of computing power, certainly more than an individual laptop or work station can provide.
 
 To get around this problem, researchers may turn to High-Performance Computing (HPC) which refers to the use of powerful computers and programming techniques to solve computationally-intensive tasks.
-HPC can refer to custom-built *supercomputers* or groups of individual computers that are connected together in a network and work as a unified system, forming a *cluster*.
+HPC can refer to custom-built *supercomputers* or to groups of individual computers that are connected together in a network and work as a unified system, forming a *cluster*.
 We call these individual computers of a cluster *nodes*.
 To give a taste of the benefit of using HPC over a regular computer, let's look at an example:
 A PhD student wants to cross-validate a statistical model 1,000 times.
-Running the model once on a laptop once takes one hour, meaning that cross-validating it 1,000 times would take over a month!
+Running the model on a laptop once takes one hour, meaning that cross-validating it 1,000 times would take over a month!
 However, if all of the model runs happen in parallel on 1,000 nodes of an HPC cluster, the cross-validation would be complete in one hour.
 How much research can be sped up is highly dependent on how efficient the code is and how parallelisable the problem.
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+::::::::::::::::::::::::::::::::::::: challenge 
 
-The information presented here has been copied and lightly adapted from:
+## What kind of resources does this researcher need?
 
-- **[Working on HPC clusters using SLURM](https://cambiotraining.github.io/hpc-intro/materials/01-intro.html)**
-- **[Introduction to High Performance Computing with Raspberry Pi](https://scw-aberystwyth.github.io/Introduction-to-HPC-with-RaspberryPi/01-HPC-intro/)**
+- Analyse survey responses from 300 human participants.
+- Run a climate model simulation at high spatial resolution.
+- Train a Large Language Model.
+- Run a simple regression on CSV data (50 MB).
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::: solution 
+
+## Solution
+ 
+- Analyse survey responses from 300 human participants.
+  - Answer: laptop
+- Run a climate model simulation at high spatial resolution.
+  - Answer: HPC
+- Train a Large Language Model.
+  - Answer: HPC
+- Run a simple regression on CSV data (50 MB).
+  - Answer: laptop
+
+:::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Case studies
 
@@ -58,47 +76,75 @@ Let's now look at some specific cases in which the use of an HPC cluster enabled
 
 ### Case study 1: Physics
 
-Most of us will remember the excitement that surrounded the release of the first image of a black hole, located in the centre of the M87 galaxy, captured in 2019.
-Although not as widely publicised, an image of SgrA*, the black hole in the centre of our own galaxy, was also captured in 2022.
+Most of us will remember the excitement that surrounded the release of the first image of a black hole, captured in 2019.
+That was the black hole in the centre of the M87 galaxy; although not as widely reported on, an image of SgrA*, the black hole in the centre of our own galaxy, was also captured in 2022.
+The existence of black holes was first posited over a century ago but, while they had been previously observed *indirectly*, 2019 was the first confirmation that black holes actually exist.
 HPC underlies multiple of the steps involved in creating these images,
 images which provide strong evidence for Einstein's theory of general relativity and have implications for our understanding of the universe.
 
-#### Why does it matter?
+#### Why study black holes?
 
-Black holes are extreme regions of space, where it would appear that both general relativity and quantum physics play a role.
-As such, they can serve as laboratories for testing these fundamental theories that explain how the universe works on the largest and on the smallest scales.
-At the moment, both theories work well in their respective scopes, but physicists currently do not understand how to create a single theory that would be universal and, hence, explain the physics of black holes in detail.
-With the Event Horizon Telescope (EHT) results, scientists are able to directly resolve the conditions of spacetime at the black hole boundary.
+Black holes are extreme regions of space, where it appears that both general relativity and quantum physics play a role.
+General relativity does a good job of explaining the gravitation of very large objects (like planets).
+Quantum physics does a good job of explaining the behaviour of very small objects, specifically subatomic particles (like photons and electrons).
+Physicists currently do not have a way to reconcile the two, but black holes, where both general relativity and quantum physics play a role, can serve as laboratories for testing these fundamental theories.
 
-There are also ways in which these achievements matter beyond their contributions to the field of astrophysics.
-Black holes tend to capture the public imagination in a way that not many scientific fields can.
-The palpable excitement around these developments can engage the public with science and help foster a trust in experts that has been declining.
+Directly observing and taking a picture of a black hole is really difficult.
+Part of the problem is that black holes are so massive and so dense that nothing can escape them, including light.
+That is because when something enters the boundary of the black hole (the _event horizon_), the velocity it would need to escape exceeds the speed of light, which is as fast as anything can move.
+As such, the black hole is dark - there is nothing to photograph.
+Around the black hole is a structure called an _accretion disk_, a hot disk of gas which is the fuel and main light source of the black hole.
+The gas swirls around the black hole and gradually moves from the outer part of the disk to its inner edge, where it falls into the event horizon.
+The dark zone produced by this is known as the event horizon _shadow_ which is what we see in the images of the M87* and SgrA*.
+
+Notably these are not photographs.
+They are radiolight **images**, the result of complex observational and computational interpretation.
+To create them, data were collected using eight pre-existing radio telescopes located across the Earth and connected with a technique called very-long-baseline interferometry.
+This technique synchronises the telescopes and exploits the rotation of the Earth to form a virtual, Earth-size telescope called the Event Horizon Telescope.
+This size is required to be able to achieve the extraordinary resolution needed to image the black holes at the centre of M87 and our own Milky Way.
+The data used in the creation of these pictures were collected in 2017, but the image of M87* was not released until 2019, meaning it took two years for researchers to process the data and generate the image.
+The image of SgrA* took even longer at five years.
+The research teams involved in these projects were international and numbering 200+ specialists.
+
+These images are an impressive feat of engineering, computing and international collaboration and, arguably, their impact extends beyond their contributions to the field of astrophysics.
+Black holes, shrouded in mystery, can capture the public imagination in a way that is rare for scientific inquiry.
+As a quick way to gauge the interest the 2019 black hole image generated, we can look at trends in Google searches for the term "black hole".
+April 2019, when the M87* image was published, is the peak in worldwide searches for "black hole" since 2004, with the relative search interest being 5 times that of the second highest peak.
+This is an imperfect tool, but it does show the impact the story had on the public.
+Perhaps the thrill surrounding such discoveries can help engage the public with science and foster a trust in experts that has been declining.
+It should also be mentioned that the face tied to this discovery was that of Katie Bouman, which feels significant given the general underrepresentation of women in STEM.
 
 ![Image of the black hole SgrA*, from the [Event Horizon Telescope website.](https://eventhorizontelescope.org/blog/astronomers-reveal-first-image-black-hole-heart-our-galaxy)](files/black-hole-sgra.png)
 
-
 #### How did HPC contribute?
-HPC was essential at every stage of the project.
-EHT is a global network of radio observatories operating together through a technique called very-long-baseline interferometry (VLBI).
-By synchronising telescopes across the Earth with atomic clocks, the EHT effectively created a virtual telescope the size of the Earth, capable of achieving the extraordinary resolution needed to image the black holes at the centre of M87 and our own Milky Way.
-This generated petabytes of raw data that were transported to and processed by highly specialised supercomputers.
-HPC systems combined and calibrated the data from multiple telescopes, reconstructed images from sparse and noisy measurements, and compared the results against extensive libraries of astrophysical simulations that modeled black holes, magnetic fields, and relativistic plasma flows.
+HPC was essential at every stage of this project.
+First of all, the data involved in generating these images is incredibly large.
+Remember that the Event Horizon Telescope is a global network of radio observatories operating together through very-long-baseline interferometry.
+Depending on instrument setup, weather and other factors, a five-day observation campaign generates about a petabyte (PB) of raw data per observatory.
+The total amount of raw data recorded in April 2017 is about 3.5 PB.
+Processing this amount of raw interferometric data to transform it into an image required vast amounts of compute, provided by highly specialised supercomputers.
+
+HPC systems combined and calibrated the data from multiple telescopes, reconstructed images from sparse and noisy measurements, and compared the results against extensive libraries of astrophysical simulations.
+As mentioned previously, these images are not direct photographs - they require theoretical work, e.g. simulating how superheated, electrically-charged gas swirls around the black hole, from its outer part to its inner edge and finally falling into the event horizon to generate the shadow we see.
 Independent teams also used different computational imaging methods to verify that the observed ring structure was real and not an artifact of processing.
-To bring to life the magnitude of computing power required for this, one of the analyses presented for SgrA* required 100 CPU hours, spread across two supercomputers.
+The calculations supporting such theoretical work was undertaken using supercomputers located around the world, such as the German Tier-0 systems SuperMUC in Garching and the American NSF Frontera supercomputer and Open Science Grid.
+A statistic that does a great job of illustrating the magnitude of computing power necessary for this work is that a single analysis, done as part of the SgrA* image, required 100 million CPU hours, spread across the two aforementioned NSF supercomputers.
 
 #### Sources and further reading
-- Why is it important to study black holes? What is there to learn from the EHT observations? ([link to the Event Horizon Telescape FAQ](https://eventhorizontelescope.org/faq/why-it-important-study-black-holes-what-there-be-learned-eht-observations))
 - Press release (April 10, 2019): Astronomers Capture First Image of a Black Hole ([link to press release on EHT website](https://eventhorizontelescope.org/press-release-april-10-2019-astronomers-capture-first-image-black-hole))
+- Why is it important to study black holes? What is there to learn from the EHT observations? ([link to the Event Horizon Telescape FAQ](https://eventhorizontelescope.org/faq/why-it-important-study-black-holes-what-there-be-learned-eht-observations))
+- How much data is recorded during an observation and how is it transferred to the central processing facilities? ([link to the Event Horizon Telescape FAQ](https://eventhorizontelescope.org/faq))
 - HPC supports first black hole image ([link to Partnership for Advanced Computing in Europe (PRACE)) website](https://prace-ri.eu/hpc-supports-first-black-hole-image/)
 - Event Horizon Telescope Technology ([link to the EHT website on Technology topics](https://eventhorizontelescope.org/technology))
 - We got it! Astronomers reveal first image of the black hole at the heart of our galaxy ([link to NSF website](https://www.nsf.gov/news/we-got-it-astronomers-reveal-first-image-black-hole-heart))
+- Anatomy of a Black Hole (link to [NASA website](https://science.nasa.gov/universe/black-holes/anatomy/))
 
 
 ### Case study 2: Biology
 Another well-publicised piece of research that made heavy use of HPC is AlphaFold.
 AlphaFold is an AI programme that is highly accurate in predicting the 3D structure of proteins.
 
-#### Why does it matter?
+#### What do proteins do?
 Proteins underpin life.
 Although proteins can be represented as a linear sequence of amino acids, their function depends on how they fold, i.e. their precise 3D structure.
 Insights into the structure, and thus the function of a protein is critical for understanding biological processes, from diseases that affect humans to bacteria that are found in our environment.
@@ -216,33 +262,6 @@ Interestingly, but perhaps not surprisingly, in contexts that were annotated as 
 - Living Machines: A study of *atypical* animacy ([link to publication](https://aclanthology.org/2020.coling-main.400.pdf))
 - The Living Machine: A Computational Approach to the Nineteenth-Century Language of Technology ([link to publication](https://muse.jhu.edu/pub/1/article/903976))
 - When Time Makes Sense: A Historically-Aware Approach to Targeted Sense Disambiguation ([link to publication](https://aclanthology.org/2021.findings-acl.243.pdf))
-
-::::::::::::::::::::::::::::::::::::: challenge 
-
-## What kind of resources does this researcher need?
-
-- Analyse survey responses from 300 human participants.
-- Run a climate model simulation at high spatial resolution.
-- Train a Large Language Model.
-- Run a simple regression on CSV data (50 MB).
-
-:::::::::::::::::::::::: solution 
-
-## Solution
- 
-- Analyse survey responses from 300 human participants.
-  - Answer: laptop
-- Run a climate model simulation at high spatial resolution.
-  - Answer: HPC
-- Train a Large Language Model.
-  - Answer: HPC
-- Run a simple regression on CSV data (50 MB).
-  - Answer: laptop
-
-:::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
 
 ::::::::::::::::::::::::::::::::::::: callout
 
