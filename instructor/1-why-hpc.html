@@ -302,7 +302,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Why use HPC?</h1>
-        <p>Last updated on 2026-07-09 |
+        <p>Last updated on 2026-07-15 |
 
         <a href="hhttps://github.com/eirini-zormpa/hpc-intro/edit/main/episodes/1-why-hpc.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -446,13 +446,16 @@ understanding of the universe.</p>
 <h4 id="why-study-black-holes">Why study black holes?<a class="anchor" aria-label="anchor" href="#why-study-black-holes"></a></h4>
 <p>Black holes are extreme regions of space, where it appears that both
 general relativity and quantum physics play a role. General relativity
-does a good job of explaining the gravitation of very large objects
-(like planets). Quantum physics does a good job of explaining the
-behaviour of very small objects, specifically subatomic particles (like
-photons and electrons). Physicists currently do not have a way to
-reconcile the two, but black holes, where both general relativity and
-quantum physics play a role, can serve as laboratories for testing these
-fundamental theories.</p>
+does a good job of explaining the gravitation of very large objects and
+led to the discovery of the Big Bang. This applies to black holes
+because of the vast gravitational pull they exhibit. Quantum physics
+does a good job of explaining the behaviour of very small objects,
+specifically subatomic particles (like photons and electrons). This
+applies to black holes because of the unknown nature of matter as it is
+pulled in. Physicists currently do not have a way to reconcile the two,
+but black holes, where both general relativity and quantum physics play
+a role, can serve as laboratories for testing these fundamental
+theories.</p>
 <p>Directly observing and taking a picture of a black hole is really
 difficult. Part of the problem is that black holes are so massive and so
 dense that nothing can escape them, including light. That is because
@@ -494,7 +497,8 @@ This is an imperfect tool, but it does show the impact the story had on
 the public. Perhaps the thrill surrounding such discoveries can help
 engage the public with science and foster a trust in experts that has
 been declining. It should also be mentioned that the face tied to this
-discovery was that of Katie Bouman, which feels significant given the
+discovery was that of Dr Katie Bouman, now a Professor of Computing and
+Mathematical Sciences at Caltech, which feels significant given the
 general underrepresentation of women in STEM.</p>
 <figure><img src="../files/black-hole-sgra.png" alt="Image of the black hole SgrA*, from the Event Horizon Telescope website." class="figure mx-auto d-block"><div class="figcaption">Image of the black hole SgrA*, from the <a href="https://eventhorizontelescope.org/blog/astronomers-reveal-first-image-black-hole-heart-our-galaxy" class="external-link">Event
 Horizon Telescope website.</a>
@@ -527,8 +531,8 @@ located around the world, such as the German Tier-0 systems SuperMUC in
 Garching and the American NSF Frontera supercomputer and Open Science
 Grid. A statistic that does a great job of illustrating the magnitude of
 computing power necessary for this work is that a single analysis, done
-as part of the SgrA* image, required 100 million CPU hours, spread
-across the two aforementioned NSF supercomputers.</p>
+as part of verifying the SgrA* image, required 100 million CPU hours,
+spread across the two aforementioned NSF supercomputers.</p>
 </div>
 <div class="section level4">
 <h4 id="sources-and-further-reading">Sources and further reading<a class="anchor" aria-label="anchor" href="#sources-and-further-reading"></a></h4>
@@ -556,8 +560,8 @@ website</a>)</li>
 <div class="section level3">
 <h3 id="case-study-2-biology">Case study 2: Biology<a class="anchor" aria-label="anchor" href="#case-study-2-biology"></a></h3>
 <p>Another well-publicised piece of research that made heavy use of HPC
-is AlphaFold. AlphaFold is an AI programme that is highly accurate in
-predicting the 3D structure of proteins.</p>
+is AlphaFold. AlphaFold is a machine learning model that is highly
+accurate in predicting the 3D structure of proteins.</p>
 <div class="section level4">
 <h4 id="what-do-proteins-do">What do proteins do?<a class="anchor" aria-label="anchor" href="#what-do-proteins-do"></a></h4>
 <p>Proteins underpin life. Although proteins can be represented as a
@@ -594,29 +598,37 @@ DeepMind on Unsplash.</a>
 remains important for its use. In developing AlphaFold, both large
 amounts of data and complex resource-intensive software was required.
 Starting with data, AlphaFold was trained on very large biological
-datasets, including experimentally determined structures and extensive
-protein-sequence databases, such as UniProt. An innovation that
+datasets: Specifically on the experimentally-determined 3D structures of
+proteins in the <a href="https://www.wwpdb.org/" class="external-link">Protein Data Bank</a>
+and their corresponding amino acid sequences in <a href="https://www.uniprot.org/" class="external-link">UniProt</a>. An innovation that
 contributed to the success of AlphaFold was the use of evolutionary
 covariation data. Evolutionary covariation is based on the observation
 that after one amino acid in a protein becomes mutated over evolutionary
 time, a compensatory mutation in another amino acid often occurs to
-maintain the structure or restore the function of the protein. This can
-indicate that these two amino acids are in direct physical contact in
-the folded protein, giving clues to the protein’s overall 3D structure.
-Finding these correlations requires multiple sequence alignments of
-related proteins, and large-scale comparisons between pairs of amino
-acids.</p>
-<p>The system that this data was used to train is a deep neural network,
-a type of machine learning model. This neural network consists of
-hundreds of layers arranged as a two-dimensional residual architecture
-with dilated convolutions, allowing it to capture relationships between
-amino acids that may be far apart in the sequence but close in
-three-dimensional space. Training such a model requires processing large
-biological datasets and iteratively updating millions of parameters
-using stochastic gradient descent. In practice, this meant running
-training jobs across 8 GPUs in parallel over hundreds of thousands of
-training steps. Even with this level of parallelism, a single training
-run took about 5 days to complete.</p>
+maintain the structure or to restore the function of the protein. This
+can indicate that these two amino acids are in direct physical contact
+in the folded protein, giving clues to the protein’s overall 3D
+structure. Finding these correlations requires multiple sequence
+alignments of related proteins, and large-scale comparisons between
+pairs of amino acids. To give an idea of scale, the data provided in the
+AlphaFold repository is approximately 3.2TB.</p>
+<p>All of this data was used to train a machine learning model, machine
+learning being a type of Artificial Intelligence able to learn patterns
+from very big, often very messy, datasets. Specifically, AlphaFold is a
+deep neural network. Neural networks were inspired by the human brain,
+where the connections between units become strengthened or weakened
+through training (analogous to neurons and synapses). Deep neural
+networks consist of multiple <em>layers</em> of these artificial neurons
+- hundreds in the case of AlphaFold! During training, AlphaFold learnt
+how to predict a protein’s 3D structure from its amino acid sequence, a
+task that required the iterative updating of millions of parameters. In
+practice, this meant running training jobs across 8 GPUs in parallel
+over hundreds of thousands of training steps. Even with this level of
+parallelism, a single training run took about 5 days to complete. Even
+after it’s trained, AlphaFold typically requires HPC to generate
+predictions of protein structure. For example, the installation
+instructions on the AlphaFold GitHub repository assume the existence of
+multiple GPUs.</p>
 </div>
 <div class="section level4">
 <h4 id="sources-and-further-reading-1">Sources and further reading<a class="anchor" aria-label="anchor" href="#sources-and-further-reading-1"></a></h4>
@@ -635,11 +647,20 @@ EMBL-EBI training</a>)</li>
 </div>
 <div class="section level3">
 <h3 id="case-study-3-digital-humanities">Case study 3: Digital Humanities<a class="anchor" aria-label="anchor" href="#case-study-3-digital-humanities"></a></h3>
-<p>Living with Machines was a research project studying the first
-industrial revolution, which took place in Britain roughly in the 19th
-century. The project used massive digitised historical collections and
-computational analytical tools to examine the human, social and cultural
-consequences of this historical movement.</p>
+<p>Although HPC is most commonly used within the physical and
+engineering sciences, it also has the potential to make huge
+contributions in the fields of arts and humanities. An example of a
+large-scale project that used advanced computing in the digital
+humanities is <em>Living with Machines</em>, a collaboration between the
+British Library, the Alan Turing Institute, Queen Mary University of
+London, University of East Anglia, University of Exeter, University of
+Cambridge and King’s College London and funded by the UKRI Arts and
+Humanities Research Council.</p>
+<p>Living with Machines studied the Industrial Revolution which took
+place in Britain roughly in the 19th century. The project used massive
+digitised historical collections and computational analytical tools to
+examine the human, social and cultural consequences of this historical
+movement.</p>
 <div class="section level4">
 <h4 id="why-does-it-matter">Why does it matter?<a class="anchor" aria-label="anchor" href="#why-does-it-matter"></a></h4>
 <p>The Industrial Revolution is a period of history that is hugely
@@ -882,8 +903,8 @@ any links that you are not going to use.
   "url": "https://eirini-zormpa.github.io/hpc-intro/instructor/1-why-hpc.html",
   "identifier": "https://eirini-zormpa.github.io/hpc-intro/instructor/1-why-hpc.html",
   "dateCreated": "2025-11-14",
-  "dateModified": "2026-07-09",
-  "datePublished": "2026-07-14"
+  "dateModified": "2026-07-15",
+  "datePublished": "2026-07-15"
 }
 
   </script><script>
