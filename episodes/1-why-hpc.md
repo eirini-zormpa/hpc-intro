@@ -85,8 +85,10 @@ images which provide strong evidence for Einstein's theory of general relativity
 #### Why study black holes?
 
 Black holes are extreme regions of space, where it appears that both general relativity and quantum physics play a role.
-General relativity does a good job of explaining the gravitation of very large objects (like planets).
+General relativity does a good job of explaining the gravitation of very large objects and led to the discovery of the Big Bang.
+This applies to black holes because of the vast gravitational pull they exhibit.
 Quantum physics does a good job of explaining the behaviour of very small objects, specifically subatomic particles (like photons and electrons).
+This applies to black holes because of the unknown nature of matter as it is pulled in.
 Physicists currently do not have a way to reconcile the two, but black holes, where both general relativity and quantum physics play a role, can serve as laboratories for testing these fundamental theories.
 
 Directly observing and taking a picture of a black hole is really difficult.
@@ -112,7 +114,7 @@ As a quick way to gauge the interest the 2019 black hole image generated, we can
 April 2019, when the M87* image was published, is the peak in worldwide searches for "black hole" since 2004, with the relative search interest being 5 times that of the second highest peak.
 This is an imperfect tool, but it does show the impact the story had on the public.
 Perhaps the thrill surrounding such discoveries can help engage the public with science and foster a trust in experts that has been declining.
-It should also be mentioned that the face tied to this discovery was that of Katie Bouman, which feels significant given the general underrepresentation of women in STEM.
+It should also be mentioned that the face tied to this discovery was that of Dr Katie Bouman, now a Professor of Computing and Mathematical Sciences at Caltech, which feels significant given the general underrepresentation of women in STEM.
 
 ![Image of the black hole SgrA*, from the [Event Horizon Telescope website.](https://eventhorizontelescope.org/blog/astronomers-reveal-first-image-black-hole-heart-our-galaxy)](files/black-hole-sgra.png)
 
@@ -128,7 +130,7 @@ HPC systems combined and calibrated the data from multiple telescopes, reconstru
 As mentioned previously, these images are not direct photographs - they require theoretical work, e.g. simulating how superheated, electrically-charged gas swirls around the black hole, from its outer part to its inner edge and finally falling into the event horizon to generate the shadow we see.
 Independent teams also used different computational imaging methods to verify that the observed ring structure was real and not an artifact of processing.
 The calculations supporting such theoretical work was undertaken using supercomputers located around the world, such as the German Tier-0 systems SuperMUC in Garching and the American NSF Frontera supercomputer and Open Science Grid.
-A statistic that does a great job of illustrating the magnitude of computing power necessary for this work is that a single analysis, done as part of the SgrA* image, required 100 million CPU hours, spread across the two aforementioned NSF supercomputers.
+A statistic that does a great job of illustrating the magnitude of computing power necessary for this work is that a single analysis, done as part of verifying the SgrA* image, required 100 million CPU hours, spread across the two aforementioned NSF supercomputers.
 
 #### Sources and further reading
 - Press release (April 10, 2019): Astronomers Capture First Image of a Black Hole ([link to press release on EHT website](https://eventhorizontelescope.org/press-release-april-10-2019-astronomers-capture-first-image-black-hole))
@@ -142,7 +144,7 @@ A statistic that does a great job of illustrating the magnitude of computing pow
 
 ### Case study 2: Biology
 Another well-publicised piece of research that made heavy use of HPC is AlphaFold.
-AlphaFold is an AI programme that is highly accurate in predicting the 3D structure of proteins.
+AlphaFold is a machine learning model that is highly accurate in predicting the 3D structure of proteins.
 
 #### What do proteins do?
 Proteins underpin life.
@@ -162,21 +164,25 @@ The AlphaFold 2 system was announced as being equally accurate to experimental m
 
 ![An artist's illustration of AI used in protein folding [Google DeepMind on Unsplash.](https://unsplash.com/photos/an-image-of-a-cell-phone-with-a-blue-background-htMw1CbMUIk)](files/ai-protein.jpg)
 
-
 #### How did HPC contribute?
 The use of HPC was fundamental in the development of AlphaFold and remains important for its use.
 In developing AlphaFold, both large amounts of data and complex resource-intensive software was required.
-Starting with data, AlphaFold was trained on very large biological datasets, including experimentally determined structures and extensive protein-sequence databases, such as UniProt.
+Starting with data, AlphaFold was trained on very large biological datasets: Specifically on the experimentally-determined 3D structures of proteins in the [Protein Data Bank](https://www.wwpdb.org/) and their corresponding amino acid sequences in [UniProt](https://www.uniprot.org/).
 An innovation that contributed to the success of AlphaFold was the use of evolutionary covariation data.
-Evolutionary covariation is based on the observation that after one amino acid in a protein becomes mutated over evolutionary time, a compensatory mutation in another amino acid often occurs to maintain the structure or restore the function of the protein.
+Evolutionary covariation is based on the observation that after one amino acid in a protein becomes mutated over evolutionary time, a compensatory mutation in another amino acid often occurs to maintain the structure or to restore the function of the protein.
 This can indicate that these two amino acids are in direct physical contact in the folded protein, giving clues to the protein's overall 3D structure.
 Finding these correlations requires multiple sequence alignments of related proteins, and large-scale comparisons between pairs of amino acids.
+To give an idea of scale, the data provided in the AlphaFold repository is approximately 3.2TB.
 
-The system that this data was used to train is a deep neural network, a type of machine learning model.
-This neural network consists of hundreds of layers arranged as a two-dimensional residual architecture with dilated convolutions, allowing it to capture relationships between amino acids that may be far apart in the sequence but close in three-dimensional space.
-Training such a model requires processing large biological datasets and iteratively updating millions of parameters using stochastic gradient descent.
+All of this data was used to train a machine learning model, machine learning being a type of Artificial Intelligence able to learn patterns from very big, often very messy, datasets.
+Specifically, AlphaFold is a deep neural network.
+Neural networks were inspired by the human brain, where the connections between units become strengthened or weakened through training (analogous to neurons and synapses).
+Deep neural networks consist of multiple *layers* of these artificial neurons - hundreds in the case of AlphaFold!
+During training, AlphaFold learnt how to predict a protein's 3D structure from its amino acid sequence, a task that required the iterative updating of millions of parameters.
 In practice, this meant running training jobs across 8 GPUs in parallel over hundreds of thousands of training steps.
 Even with this level of parallelism, a single training run took about 5 days to complete.
+Even after it's trained, AlphaFold typically requires HPC to generate predictions of protein structure.
+For example, the installation instructions on the AlphaFold GitHub repository assume the existence of multiple GPUs. 
 
 #### Sources and further reading
 
@@ -186,7 +192,10 @@ Even with this level of parallelism, a single training run took about 5 days to 
 - Online training on AlphaFold ([link to EMBL-EBI training](https://www.ebi.ac.uk/training/online/courses/alphafold/))
 
 ### Case study 3: Digital Humanities
-Living with Machines was a research project studying the first industrial revolution, which took place in Britain roughly in the 19th century.
+Although HPC is most commonly used within the physical and engineering sciences, it also has the potential to make huge contributions in the fields of arts and humanities.
+An example of a large-scale project that used advanced computing in the digital humanities is *Living with Machines*, a collaboration between the British Library, the Alan Turing Institute, Queen Mary University of London, University of East Anglia, University of Exeter, University of Cambridge and King's College London and funded by the UKRI Arts and Humanities Research Council.
+
+Living with Machines studied the Industrial Revolution which took place in Britain roughly in the 19th century.
 The project used massive digitised historical collections and computational analytical tools to examine the human, social and cultural consequences of this historical movement.
 
 #### Why does it matter?
