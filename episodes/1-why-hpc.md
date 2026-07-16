@@ -78,7 +78,7 @@ Let's now look at some specific cases in which the use of an HPC cluster enabled
 
 Most of us will remember the excitement that surrounded the release of the first image of a black hole, captured in 2019.
 That was the black hole in the centre of the M87 galaxy; although not as widely reported on, an image of SgrA*, the black hole in the centre of our own galaxy, was also captured in 2022.
-The existence of black holes was first posited over a century ago but, while they had been previously observed *indirectly*, 2019 was the first confirmation that black holes actually exist.
+The existence of black holes was first posited over a century ago but, while they had been previously observed *indirectly*, 2019 was the first visual confirmation that black holes actually exist.
 HPC underlies multiple of the steps involved in creating these images,
 images which provide strong evidence for Einstein's theory of general relativity and have implications for our understanding of the universe.
 
@@ -92,9 +92,9 @@ This applies to black holes because of the unknown nature of matter as it is pul
 Physicists currently do not have a way to reconcile the two, but black holes, where both general relativity and quantum physics play a role, can serve as laboratories for testing these fundamental theories.
 
 Directly observing and taking a picture of a black hole is really difficult.
-Part of the problem is that black holes are so massive and so dense that nothing can escape them, including light.
+Part of the problem is that black holes are so massive and so dense that almost nothing can escape them, not even light.
 That is because when something enters the boundary of the black hole (the _event horizon_), the velocity it would need to escape exceeds the speed of light, which is as fast as anything can move.
-As such, the black hole is dark - there is nothing to photograph.
+As such, the black hole is essentially dark - there is almost nothing to photograph.
 Around the black hole is a structure called an _accretion disk_, a hot disk of gas which is the fuel and main light source of the black hole.
 The gas swirls around the black hole and gradually moves from the outer part of the disk to its inner edge, where it falls into the event horizon.
 The dark zone produced by this is known as the event horizon _shadow_ which is what we see in the images of the M87* and SgrA*.
@@ -190,6 +190,7 @@ For example, the installation instructions on the AlphaFold GitHub repository as
 - AlphaFold uses open data and AI to discover the 3D protein universe ([link to blog post on EMBL.org](https://www.embl.org/news/science/alphafold-using-open-data-and-ai-to-discover-the-3d-protein-universe))
 - Open access to predicted proteins via AlphaFold Protein Structure Database ([link to EMBL-EBI database](https://alphafold.ebi.ac.uk/))
 - Online training on AlphaFold ([link to EMBL-EBI training](https://www.ebi.ac.uk/training/online/courses/alphafold/))
+- AlphaFold GitHub repository ([link](https://github.com/google-deepmind/alphafold))
 
 ### Case study 3: Digital Humanities
 Although HPC is most commonly used within the physical and engineering sciences, it also has the potential to make huge contributions in the fields of arts and humanities.
