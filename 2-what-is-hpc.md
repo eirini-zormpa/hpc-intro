@@ -42,6 +42,8 @@ The scheduler uses this information to prioritise jobs and make as efficient use
 One of the most commonly used job schedulers is Slurm.
 There will be more information on Slurm in the following episode.
 
+<!-- add more information on filesystems and memory >
+
 ## Different types of HPC
 
 <!-- if only embarassingly parallel, rethink how sections work -->
