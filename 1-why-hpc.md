@@ -138,10 +138,10 @@ A statistic that does a great job of illustrating the magnitude of computing pow
 - Press release (April 10, 2019): Astronomers Capture First Image of a Black Hole ([link to press release on EHT website](https://eventhorizontelescope.org/press-release-april-10-2019-astronomers-capture-first-image-black-hole))
 - Why is it important to study black holes? What is there to learn from the EHT observations? ([link to the Event Horizon Telescape FAQ](https://eventhorizontelescope.org/faq/why-it-important-study-black-holes-what-there-be-learned-eht-observations))
 - How much data is recorded during an observation and how is it transferred to the central processing facilities? ([link to the Event Horizon Telescape FAQ](https://eventhorizontelescope.org/faq))
-- HPC supports first black hole image ([link to Partnership for Advanced Computing in Europe (PRACE)) website](https://prace-ri.eu/hpc-supports-first-black-hole-image/)
+- HPC supports first black hole image ([link to Partnership for Advanced Computing in Europe (PRACE) website](https://prace-ri.eu/hpc-supports-first-black-hole-image/))
 - Event Horizon Telescope Technology ([link to the EHT website on Technology topics](https://eventhorizontelescope.org/technology))
 - We got it! Astronomers reveal first image of the black hole at the heart of our galaxy ([link to NSF website](https://www.nsf.gov/news/we-got-it-astronomers-reveal-first-image-black-hole-heart))
-- Anatomy of a Black Hole (link to [NASA website](https://science.nasa.gov/universe/black-holes/anatomy/))
+- Anatomy of a Black Hole ([link to NASA website](https://science.nasa.gov/universe/black-holes/anatomy/))
 
 ### Case study 2: Biology
 Another well-publicised piece of research that made heavy use of HPC is AlphaFold.
@@ -271,29 +271,34 @@ Interestingly, but perhaps not surprisingly, in contexts that were annotated as 
 
 ::::::::::::::::::::::::::::::::::::: callout
 
-## High-Performance Computing and Artificial Intelligence
+## High-Performance Computing and Artificial Intelligence (AI)
 
 Before we get into how HPC and AI relate to one another, let's establish what we mean by "AI".
-Since ChatGPT was publicly launched in November 2022, the term "AI" tends to refer to generative AI chatbots, like ChatGPT and Claude.
-More generally, AI is a field of computer science working on developing start machines that can perform tasks that would normally require human intelligence.
-As such, "AI" is used to refer to the most advanced algorithms that can perform such tasks.
+AI is a field of computer science.
+Researchers within this field work on developing advanced computer programmes that can perform tasks that would normally require human intelligence.
+"AI" tends to refer to the most recent development from the field.
 
-Before 2022, AI usually referred to Machine Learning.
-Machine Learning is a subset of artificial intelligence that automatically enables a machine or system to learn and improve from experience.
-Instead of explicit programming, machine learning uses algorithms to analyse large amounts of data, learn from the insights, and then make informed decisions. 
-Machine learning algorithms improve performance over time as they are trained—exposed to more data.
-Machine learning models are the output, or what the program learns from running an algorithm on training data.
-The more data used, the better the model will get. 
+Before 2022, AI usually referred to Machine Learning, a subfield of artificial intelligence.
+In Machine Learning, an algorithm is exposed to a large amount of data from which it tries to identify patterns and draw inferences.
+For example, an algorithm may be trained on a large number of scans depicting cancerous or non-cancerous tumours.
+Through training, the algorithm startes to associate features of the scans with the presence or absence or cancer.
+Crucially, these associations can be correct or incorrect.
+After training is complete, the algorithm is exposed to a new set of scans to test whether it accurately classifies the tumours as being cancerous or not.
+Different parameters of the algorithm can then be tuned to achieve higher testing performance.
+The output of this process, whereby an algorithm is exposed to and learns from data, is a machine learning model.
+Typically, the more data used, the better the model will get. 
 
-*Source: [Google Cloud](https://cloud.google.com/learn/artificial-intelligence-vs-machine-learning)*
-
-At the time of writing (in 2026), the prevailing meaning of AI is generative AI.
+At the time of writing (in 2026), the term AI is overwhelmingly used to refer to generative AI chatbots, like ChatGPT and Claude.
 Generative models are used to, as the name suggests, generate - that can be text, images, videos etc.
 Generative AI became possible with the creation of deep neural networks (a type of machine learning) and particularly Large Language Models (LLMs) which rely on the transformer architecture.
 
 Modern AI methods (be it machine learning models or generative models) tend to be both data- and compute-intensive, requiring appropriate infrastructure.
 Often, this infrastructure is an HPC cluster.
-As such AI and HPC are in a symbiotic relationship, where AI methods require HPC infrastructure to be implemented on the scale we see today and HPC is experiencing growth due to the pervasiveness and large compute demands of AI.
+As such, AI and HPC are in a symbiotic relationship, where AI methods require HPC infrastructure to be implemented on the scale we see today and HPC is experiencing growth due to the pervasiveness and large compute demands of AI.
+
+### Sources and further reading
+- Artificial Intelligence (AI) versus Machine Learning (ML) ([link to Google Cloud](https://cloud.google.com/learn/artificial-intelligence-vs-machine-learning))
+
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
