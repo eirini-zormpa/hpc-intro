@@ -932,7 +932,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-2-what-is-hpc"><p>Content from <a href="2-what-is-hpc.html">What is HPC?</a></p>
 <hr>
-<p>Last updated on 2026-05-27 |
+<p>Last updated on 2026-08-20 |
 
         <a href="hhttps://github.com/eirini-zormpa/hpc-intro/edit/main/episodes/2-what-is-hpc.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1003,10 +1003,12 @@ The scheduler uses this information to prioritise jobs and make as
 efficient use of the resources as possible. One of the most commonly
 used job schedulers is Slurm. There will be more information on Slurm in
 the following episode.</p>
-</section><section><h2 class="section-heading" id="different-types-of-hpc">Different types of HPC<a class="anchor" aria-label="anchor" href="#different-types-of-hpc"></a>
-</h2>
-<hr class="half-width">
-<!-- if only embarassingly parallel, rethink how sections work --><p>We’ve talked about the different hardware components of an HPC
+<!-- add more information on filesystems and memory >
+
+## Different types of HPC
+
+<!-- if only embarassingly parallel, rethink how sections work -->
+<p>We’ve talked about the different hardware components of an HPC
 cluster that determine the system’s computing power, bandwidth and
 memory storage. These can be configured in bespoke ways to suit the type
 of problem at hand. For example, some problems require a lot of storage
@@ -1068,7 +1070,7 @@ important compared to an embarassingly parallel task.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1157,7 +1159,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-3-hpc-workflow"><p>Content from <a href="3-hpc-workflow.html">What does an HPC workflow look like?</a></p>
 <hr>
-<p>Last updated on 2026-05-27 |
+<p>Last updated on 2026-08-20 |
 
         <a href="hhttps://github.com/eirini-zormpa/hpc-intro/edit/main/episodes/3-hpc-workflow.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1189,18 +1191,24 @@ any links that you are not going to use.
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="hpc-types">HPC types<a class="anchor" aria-label="anchor" href="#hpc-types"></a>
+<section><h2 class="section-heading" id="basic-steps">Basic steps<a class="anchor" aria-label="anchor" href="#basic-steps"></a>
 </h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="workflow-steps">Workflow steps<a class="anchor" aria-label="anchor" href="#workflow-steps"></a>
+<hr class="half-width">
+<p>[create schematic showing the steps: log in, submit job, run job +
+interaction with memory]</p>
+</section><section><h2 class="section-heading" id="schedulers">Schedulers<a class="anchor" aria-label="anchor" href="#schedulers"></a>
+</h2>
+<hr class="half-width">
+<p>[what is SLURM, what are other schedulers]</p>
+</section><section><h2 class="section-heading" id="walk-through-of-logging-in-and-running-a-job">Walk through of logging in and running a job<a class="anchor" aria-label="anchor" href="#walk-through-of-logging-in-and-running-a-job"></a>
+</h2>
+<hr class="half-width"></section><section><h2 class="section-heading" id="call-outs-to-consider-including">Call-outs to consider including<a class="anchor" aria-label="anchor" href="#call-outs-to-consider-including"></a>
 </h2>
 <hr class="half-width">
 <ul>
-<li>what does a researcher need to do on the resource</li>
-<li>where are the code and the data located? (on the cluster, openly
-available on a repository or similar)</li>
-<li>other topics, such as TREs, data security, software licensing (could
-include per-core licensing). Other topics should probably be formatted
-as callouts</li>
+<li>TREs</li>
+<li>data security</li>
+<li>software licencsing (including per-core licensing)</li>
 </ul>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
