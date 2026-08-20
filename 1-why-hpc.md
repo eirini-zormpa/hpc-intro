@@ -141,7 +141,6 @@ A statistic that does a great job of illustrating the magnitude of computing pow
 - We got it! Astronomers reveal first image of the black hole at the heart of our galaxy ([link to NSF website](https://www.nsf.gov/news/we-got-it-astronomers-reveal-first-image-black-hole-heart))
 - Anatomy of a Black Hole (link to [NASA website](https://science.nasa.gov/universe/black-holes/anatomy/))
 
-
 ### Case study 2: Biology
 Another well-publicised piece of research that made heavy use of HPC is AlphaFold.
 AlphaFold is a machine learning model that is highly accurate in predicting the 3D structure of proteins.
@@ -196,19 +195,14 @@ For example, the installation instructions on the AlphaFold GitHub repository as
 Although HPC is most commonly used within the physical and engineering sciences, it also has the potential to make huge contributions in the fields of arts and humanities.
 An example of a large-scale project that used advanced computing in the digital humanities is *Living with Machines*, a collaboration between the British Library, the Alan Turing Institute, Queen Mary University of London, University of East Anglia, University of Exeter, University of Cambridge and King's College London and funded by the UKRI Arts and Humanities Research Council.
 
-Living with Machines studied the Industrial Revolution which took place in Britain roughly in the 19th century.
-The project used massive digitised historical collections and computational analytical tools to examine the human, social and cultural consequences of this historical movement.
+Living with Machines brough together huge datasets of digitised historical documents and computational tools to study the Industrial Revolution which took place in Britain from the late 18th to the early 20th century.
 
-#### Why does it matter?
-The Industrial Revolution is a period of history that is hugely important to Britain, but also had world-wide consequences.
-Gaining more insight into how it affected people and places is valuable historical work.
+#### Why is the Industrial Revolution important?
+The Industrial Revolution is a hugely important historical period, the consequences of which were felt around the world, though it impacted Britain and other Western countries first.
+Gaining a better understanding of this period, for example studying the impacts of technological advancement and mechanisation on people and places, is valuable historical work in and of itself.
+Doing so at a time when AI is, depending on your perspective, promising or threatening to change the way we work and create art is especially pertinent.
 
-The central theme of the Living with Machines project is the mechanisation of work practices.
-This is a topic that speaks directly to present debates about how society can accommodate the revolutionary consequences of AI.
-To understand the fraught co-existence of human and machine, this project contends that we need research methods that combine technological innovation and human expertise.
-
-The tools that the Living with Machines project created can be used in other areas within and outside of Digital Humanities.
-These include tools for parsing maps, matching "fuzzy" words that have been scanned, and models that can read 19th-century English.
+The tools that the Living with Machines project created, e.g. for parsing maps, combine technological innovation with human expertise and can be used to study other questions within and outside of Digital Humanities.
 
 ![D. Napier & Son Ltd, 'Aero Engine in the Making', England, circa 1918. [Shared by Museums Victoria on Unsplash](https://unsplash.com/photos/grayscale-photography-of-man-facing-mechanical-machine-9Prj6M-JAaA)](files/industrial-revolution.jpg)
 
@@ -223,7 +217,7 @@ The first tool we'll look at is `MapReader`, a free open-source Python library u
 One of the innovations introduced by this tool is that annotation was carried out not at the level of the pixel, but rather of the "patch", a flexible and meaningful semantic unit. 
 
 HPC was already used in the creation of the dataset that was used to train and evaluate the model.
-This data is 16,439 scanned Ordnance Survey map sheets at 1:10,560 scale, surveyed between ca. 1890 and the beginning of WWI.
+This dataset includes 16,439 scanned Ordnance Survey map sheets at 1:10,560 scale, surveyed between ca. 1890 and the beginning of World War I.
 The size of the dataset was about 600Gb and it took about 32 hours on 6 cores to slice it into 30.5 million patches.
 
 Of interest to the researchers in this case was the categorisation of patches as containing rail infrastructure versus buildings.
@@ -237,11 +231,12 @@ This took four NVIDIA Tesla K80 GPUs approximately 172 GPU hours.
 *String matching* refers to the process of matching strings (words) to a knowledge base to facilitate Natural Language Processing (NLP).
 This can be difficult to do well in historical documents because of the diversity in the appearance of the same word in different contexts.
 For example, scans of a word handwritten in cursive or printed on degraded paper will look different to how that word is stored in a database.
-Adding to that changes and inconsistencies in spelling  and the use of characters have since fallen out of favour and the picture becomes very complex.
+Add to that changes and inconsistencies in spelling and the use of characters which have since fallen out of favour and the picture becomes very complex.
 
 `DeezyMatch` uses different types of deep neural networks, the hyperparameters of which can be configured without the code needing to be modified.
-It also does not require a model to be trained from scratch, but rather finetune a model that has already been trained, which is useful in cases where limited training examples are available.
-HPC was used to preprocess data and train models (28 GPU or 54 CPU minutes) and to generate and combine candidate vectors (39 GPU or 204 CPU minutes).
+It also does not require a model to be trained from scratch, but rather finetunes a pre-trained model; this is really useful in cases where only limited training examples are available.
+A test case presented for `DeezyMatch` is its ability to correctly identify place names.
+In this case, HPC was used to preprocess the data and train the models (28 GPU or 54 CPU minutes) and then to generate and combine the candidate vectors, meaning the places likely referred to in the text (39 GPU or 204 CPU minutes).
 
 ##### Neural language models for 19th century English
 
@@ -250,18 +245,17 @@ The data used for this was 47,685 books published between 1760 and 1900.
 The text of the books was preprocessed, separated into sentences and tokenised into 5.1 billion tokens (essentially words).
 The model we will look at here was BERT, which was trained on 4 NVIDIA Tesla K80 GPUs in parallel.
 
-One of the models that was trained, BERT, was used in a range of tasks later on.
-One of these tasks was detecting atypical animacy, i.e. exploring how animate people considered machines.
+BERT was used in a range of tasks, including detecting atypical animacy, i.e. exploring the degree to which people considered machines to be animate.
 The method went as follows:
-1. extract high-quality sentences from a varied and representative corpus of texts from the long 19th century that use the word "machine".
+1. extract high-quality sentences from a varied and representative corpus of texts from (roughly) the 19th century that use the word "machine".
 2. mask the word "machine" and use a neural language model trained in 19th century English to predict the masked word
 3. calculate an animacy score for the masked word from the predictions of the language model
 
-Variants of this approach include annotating sentences for "humanness" (an attribute related to, but distinct from animacy) and comparing the predictions that models trained on texts from different times make (i.e. from pre 1850, 1850-1875, 1875-1890, 1890-1900, and contemporary).
+Variants of this approach include annotating sentences for "humanness" (an attribute related to, but distinct from animacy) and comparing the predictions made by models trained on texts from different times (i.e. from pre 1850, 1850-1875, 1875-1890, 1890-1900, and contemporary).
 
 On a basic level, this line of inquiry can capture the implicit and changing attitudes to who is expected to do different types of work and the changing senses of ambiguous words across time.
 On a deeper level, it can tell us about how animate and/or human machines were perceived to be, with implications about how much empathy people might extend to them.
-Interestingly, but perhaps not surprisingly, in contexts that were annotated as high in animacy but low in humanness, the 19th century models would sometimes predict the word "slave" instead of "machine" or "man".
+Interestingly, but perhaps not surprisingly, in contexts that were annotated as high in animacy but low in humanness, the 19th century models would sometimes predict the word "slave" instead of "machine".
 
 #### Sources and further reading
 
