@@ -6,13 +6,15 @@ exercises: 10
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- What are good use cases for a High-Performance Computing (HPC) cluster?
+- What types of research problem would benefit from using a High-Performance Computing (HPC) cluster?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain when using an HPC cluster is a good idea.
+- Explain why HPC is becoming increasingly important for research.
+- List types of problems that the use of HPC can help to solve.
+- Recognise the importance of HPC across different disciplines.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
