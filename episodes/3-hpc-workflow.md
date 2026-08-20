@@ -17,12 +17,20 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## HPC types
+## Basic steps
 
-## Workflow steps
+[create schematic showing the steps: log in, submit job, run job + interaction with memory]
 
-- what does a researcher need to do on the resource
-- where are the code and the data located? (on the cluster, openly available on a repository or similar)
-- other topics, such as TREs, data security, software licensing (could include per-core licensing). Other topics should probably be formatted as callouts
+## Schedulers
+
+[what is SLURM, what are other schedulers]
+
+## Walk through of logging in and running a job
+
+## Call-outs to consider including
+
+- TREs
+- data security
+- software licencsing (including per-core licensing)
 
 
