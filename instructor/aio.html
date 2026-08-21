@@ -339,7 +339,7 @@
         
 <section id="aio-1-why-hpc"><p>Content from <a href="1-why-hpc.html">Why use HPC?</a></p>
 <hr>
-<p>Last updated on 2026-08-20 |
+<p>Last updated on 2026-08-21 |
 
         <a href="hhttps://github.com/eirini-zormpa/hpc-intro/edit/main/episodes/1-why-hpc.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 40 minutes</p>
@@ -401,31 +401,32 @@ median dataset in 2018 was up to 10 times larger compared to 2011 (<a href="http
 expects the data that CERN records in a year to increase from 160
 petabytes in 2018 to 800 petabytes in 2026, a more than fourfold
 increase of an already huge amount of data (<a href="https://doi.org/10.3389/fdata.2023.1271639" class="external-link">Clissa, Lassnig, &amp;
-Rinaldi, 2023</a>). In addition to ever-growing dataset size, scientists
-are also increasingly turning to computational methods. For example,
-biology used to be a discipline based exclusively in a wet lab, but
-bioinformatics over the last few decades has become a substantial
-percentage of biological research. Or, think of meteorology - people
-have been trying to predict the weather for millenia, but doing so as
-accurately as we can now is only possible because of big data and highly
-complex models. These advances in data size and calculation complexity
-require <em>a lot</em> of computing power, certainly more than an
-individual laptop or work station can provide.</p>
+Rinaldi, 2023</a>).</p>
+<p>In addition to ever-growing dataset size, scientists are also
+increasingly turning to computational methods. For example, biology used
+to be a discipline based exclusively in a wet lab, but bioinformatics
+over the last few decades has become a substantial percentage of
+biological research. Or, think of meteorology - people have been trying
+to predict the weather for millenia, but doing so as accurately as we
+can now is only possible because of big data and highly complex models.
+These advances in data size and calculation complexity require <em>a
+lot</em> of computing power, certainly more than an individual laptop or
+work station can provide.</p>
 <p>To get around this problem, researchers may turn to High-Performance
 Computing (HPC) which refers to the use of powerful computers and
 programming techniques to solve computationally-intensive tasks. HPC can
 refer to custom-built <em>supercomputers</em> or to groups of individual
 computers that are connected together in a network and work as a unified
 system, forming a <em>cluster</em>. We call these individual computers
-of a cluster <em>nodes</em>. To give a taste of the benefit of using HPC
-over a regular computer, let’s look at an example: A PhD student wants
-to cross-validate a statistical model 1,000 times. Running the model on
-a laptop once takes one hour, meaning that cross-validating it 1,000
-times would take over a month! However, if all of the model runs happen
-in parallel on 1,000 nodes of an HPC cluster, the cross-validation would
-be complete in one hour. How much research can be sped up is highly
-dependent on how efficient the code is and how parallelisable the
-problem.</p>
+of a cluster <em>nodes</em>.</p>
+<p>To give a taste of the benefit of using HPC over a regular computer,
+let’s look at an example: A PhD student wants to cross-validate a
+statistical model 1,000 times. Running the model on a laptop once takes
+one hour, meaning that cross-validating it 1,000 times would take over a
+month! However, if all of the model runs happen in parallel on 1,000
+nodes of an HPC cluster, the cross-validation would be complete in one
+hour. How much research can be sped up is highly dependent on how
+efficient the code is and how parallelisable the problem.</p>
 <div id="what-kind-of-resources-does-this-researcher-need" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -435,10 +436,13 @@ problem.</p>
 <h3 class="callout-title">What kind of resources does this researcher
 need?</h3>
 <div class="callout-content">
+<p>In each of the four following scenarios, does the researcher need
+access to HPC or would a laptop suffice?</p>
 <ul>
-<li>Analyse survey responses from 300 human participants.</li>
+<li>Analyse survey responses from 300 human participants with 10
+variables.</li>
 <li>Run a climate model simulation at high spatial resolution.</li>
-<li>Train a Large Language Model.</li>
+<li>Train a modern Large Language Model to power an AI chatbot.</li>
 <li>Run a simple regression on CSV data (50 MB).</li>
 </ul>
 </div>
@@ -449,7 +453,7 @@ need?</h3>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>Analyse survey responses from 300 human participants.
@@ -1078,7 +1082,7 @@ important compared to an embarassingly parallel task.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
