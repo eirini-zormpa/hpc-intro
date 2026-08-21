@@ -32,6 +32,7 @@ Scientific research is becoming increasingly computational, relying on large dat
 This feels intuitively true, but it has also been verified by studies which have tried to quantify this change:
 One study looking at the size of medical image datasets used for research found that the size of the median dataset in 2018 was up to 10 times larger compared to 2011 ([Kiryati & Landau, 2021](https://doi.org/10.3390/jimaging7080155)).
 Another study, looking at big data in industry and academia, expects the data that CERN records in a year to increase from 160 petabytes in 2018 to 800 petabytes in 2026, a more than fourfold increase of an already huge amount of data ([Clissa, Lassnig, & Rinaldi, 2023](https://doi.org/10.3389/fdata.2023.1271639)).
+
 In addition to ever-growing dataset size, scientists are also increasingly turning to computational methods.
 For example, biology used to be a discipline based exclusively in a wet lab, but bioinformatics over the last few decades has become a substantial percentage of biological research.
 Or, think of meteorology - people have been trying to predict the weather for millenia, but doing so as accurately as we can now is only possible because of big data and highly complex models.
@@ -40,6 +41,7 @@ These advances in data size and calculation complexity require _a lot_ of comput
 To get around this problem, researchers may turn to High-Performance Computing (HPC) which refers to the use of powerful computers and programming techniques to solve computationally-intensive tasks.
 HPC can refer to custom-built *supercomputers* or to groups of individual computers that are connected together in a network and work as a unified system, forming a *cluster*.
 We call these individual computers of a cluster *nodes*.
+
 To give a taste of the benefit of using HPC over a regular computer, let's look at an example:
 A PhD student wants to cross-validate a statistical model 1,000 times.
 Running the model on a laptop once takes one hour, meaning that cross-validating it 1,000 times would take over a month!
@@ -50,15 +52,17 @@ How much research can be sped up is highly dependent on how efficient the code i
 
 ## What kind of resources does this researcher need?
 
-- Analyse survey responses from 300 human participants.
+In each of the four following scenarios, does the researcher need access to HPC or would a laptop suffice?
+
+- Analyse survey responses from 300 human participants with 10 variables.
 - Run a climate model simulation at high spatial resolution.
-- Train a Large Language Model.
+- Train a modern Large Language Model to power an AI chatbot.
 - Run a simple regression on CSV data (50 MB).
 
 :::::::::::::::::::::::: solution 
 
 ## Solution
- 
+
 - Analyse survey responses from 300 human participants.
   - Answer: laptop
 - Run a climate model simulation at high spatial resolution.
