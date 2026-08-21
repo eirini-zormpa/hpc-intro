@@ -3,7 +3,13 @@ site: sandpaper::sandpaper_site
 ---
 
 This lesson teaches the basics of High-Performance Computing (HPC).
-The intended audience is digital Research Technical Professionals who enable researchers to use HPC but do not necessarily need to use HPC in their own work.
+The intended primary audience is digital Research Technical Professionals (dRTPs) who enable researchers to use HPC but do not necessarily need to use HPC in their own work.
+In creating this course, we especially had in mind research facilitators, research engagement professionals, and community managers.
+We expect that this lesson would also be of interest to reseachers who are interested in learning more about HPC but do not yet use it in their work.
+No prior knowledge or experience with HPC is required to engage with these materials.
+
+The intended delivery format is in an instructor-led half-day workshop.
+Access to HPC resources is expected to be provided by a mini HPC cluster for training and demo purposes.
 
 ### Sources and bibliography
 We consulted a number of resources and training materials in designing and creating this lesson, which have shaped its structure and content.
