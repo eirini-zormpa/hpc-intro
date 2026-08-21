@@ -26,6 +26,8 @@ exercises: 10
 
 ## Environmental impact of HPC
 
+these resources are free at the point of access but they do have significant costs
+
 ### The challenge
 
 ### Steps to mitigate impact

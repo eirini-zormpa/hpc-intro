@@ -17,6 +17,16 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+<!-- Looking at both the hardware and software aspects of HPC.
+The hardware that makes up the cluster. often dedicated to efficiently support different kinds of computing
+all clusters need processors - there are different kinds of processors - traditionally CPUs which are very flexible etc but at a cost i.e. resource (space on the chip etc)
+people looked at accelerators, e.g. GPU traditionally focused on graphics etc.
+data centre GPUs don't even have the parts that would allow you to display stuff on screen
+
+software
+doing computation efficiently - tghtly coupled vs embarassingly parallel (most AI things)
+-->
+
 ## HPC clusters 101
 
 The previous episode already established that HPC clusters are made up of computers, which we call nodes, which are connected through a, typically high-speed, network.
@@ -28,11 +38,9 @@ HPC clusters will generally require the following basic components:
   - compute node are used to run jobs. There are numerous compute nodes in a cluster.
   - storage, where files are stored. The nodes used for storage may have more RAM than the compute nodes.
 - a switch, which connects the login, compute, and storage nodes to allow them to act as a seamless unit. These are usually InfiniBand or other high-speed Ethernet to meet the low-latency, high-bandwidth requirements of HPC clusters.
-
-<!-- is this stupid xD -->
 - cables connecting the different nodes
 
-![Schematic of an HPC cluster, from the [Yale Center for Research Computing.](https://docs.ycrc.yale.edu/clusters-at-yale/)](files/clusters.png)
+![Schematic of an HPC cluster, from the [Yale Center for Research Computing (placeholder).](https://docs.ycrc.yale.edu/clusters-at-yale/)](files/clusters.png)
 
 The components listed until now are all hardware.
 A very important piece of software when working on an HPC cluster is the _job scheduler_.
@@ -42,9 +50,11 @@ The scheduler uses this information to prioritise jobs and make as efficient use
 One of the most commonly used job schedulers is Slurm.
 There will be more information on Slurm in the following episode.
 
-<!-- add more information on filesystems and memory >
+<!-- add more information on filesystems and memory -->
 
 ## Different types of HPC
+
+material on HPC types: https://www.hpc-carpentry.org/hpc-python/06-parallel/index.html, https://train.rse.ox.ac.uk/material/HPCu/high_performance_computing/hpc_parallel_intro/01_introduction
 
 <!-- if only embarassingly parallel, rethink how sections work -->
 
@@ -72,7 +82,7 @@ Here, CPUs are able to work on tasks independently, but they all need access to 
 
 For this kind of tasks, all CPUs need to be part of the same node and have access to the same RAM.
 -->
-### Message Parsing Interface (MPI) parallelism
+### Message Parsing Interface (MPI)/ Tightly coupled parallelism
 
 Sometimes, jobs can be parallelised to an extent but cannot be run completely independently of each other, but need to exchange information.
 Generally this is the case because the different chunks of the task that needs to be completed can only be in a certain order.
@@ -83,7 +93,13 @@ In those cases, a high-speed low-latency interconnect is much more important com
     constraints: memory, processors, discs. how do platforms differ? different kinds of HPC task require different resources (e.g. a lot of memory but little CPU vs lots of bandwidth)
     lots of computers that are similar to what your laptop but specialised
     specialist hardware matters because there are different types of computation which can rely heavily on the connection between the nodes. this gets us to high throughput vs high performance.
+
+
+    CPUs (flexible, resource-intensive) versus accelerators (do something repetitive very efficiently). e.g. for ML you need linear algebra where you need to do a lot of the same kind of calculation. These are simpler in some way because they are able to do fewer things but they are very efficient at doing the thing it was created to do.
+    flexibility vs speed
 -->
+
+
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
