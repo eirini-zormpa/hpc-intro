@@ -219,6 +219,7 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#hpc-clusters-101">HPC clusters 101</a></li>
+<li><a href="#different-types-of-hpc">Different types of HPC</a></li>
 <li><a href="#visible-hpc">Visible HPC</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
@@ -302,7 +303,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>What is HPC?</h1>
-        <p>Last updated on 2026-08-20 |
+        <p>Last updated on 2026-08-21 |
 
         <a href="hhttps://github.com/eirini-zormpa/hpc-intro/edit/main/episodes/2-what-is-hpc.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -338,6 +339,15 @@
 </div>
 </div>
 </div>
+<!-- Looking at both the hardware and software aspects of HPC.
+The hardware that makes up the cluster. often dedicated to efficiently support different kinds of computing
+all clusters need processors - there are different kinds of processors - traditionally CPUs which are very flexible etc but at a cost i.e. resource (space on the chip etc)
+people looked at accelerators, e.g. GPU traditionally focused on graphics etc.
+data centre GPUs don't even have the parts that would allow you to display stuff on screen
+
+software
+doing computation efficiently - tghtly coupled vs embarassingly parallel (most AI things)
+-->
 <section><h2 class="section-heading" id="hpc-clusters-101">HPC clusters 101<a class="anchor" aria-label="anchor" href="#hpc-clusters-101"></a></h2>
 <hr class="half-width"><p>The previous episode already established that HPC clusters are made
 up of computers, which we call nodes, which are connected through a,
@@ -355,9 +365,9 @@ more RAM than the compute nodes.</li>
 allow them to act as a seamless unit. These are usually InfiniBand or
 other high-speed Ethernet to meet the low-latency, high-bandwidth
 requirements of HPC clusters.</li>
-</ul><!-- is this stupid xD --><ul><li>cables connecting the different nodes</li>
-</ul><figure><img src="../files/clusters.png" alt="Schematic of an HPC cluster, from the Yale Center for Research Computing." class="figure mx-auto d-block"><div class="figcaption">Schematic of an HPC cluster, from the <a href="https://docs.ycrc.yale.edu/clusters-at-yale/" class="external-link">Yale Center for
-Research Computing.</a>
+<li>cables connecting the different nodes</li>
+</ul><figure><img src="../files/clusters.png" alt="Schematic of an HPC cluster, from the Yale Center for Research Computing (placeholder)." class="figure mx-auto d-block"><div class="figcaption">Schematic of an HPC cluster, from the <a href="https://docs.ycrc.yale.edu/clusters-at-yale/" class="external-link">Yale Center for
+Research Computing (placeholder).</a>
 </div>
 </figure><p>The components listed until now are all hardware. A very important
 piece of software when working on an HPC cluster is the <em>job
@@ -369,10 +379,10 @@ The scheduler uses this information to prioritise jobs and make as
 efficient use of the resources as possible. One of the most commonly
 used job schedulers is Slurm. There will be more information on Slurm in
 the following episode.</p>
-<!-- add more information on filesystems and memory >
-
-## Different types of HPC
-
+<!-- add more information on filesystems and memory -->
+</section><section><h2 class="section-heading" id="different-types-of-hpc">Different types of HPC<a class="anchor" aria-label="anchor" href="#different-types-of-hpc"></a></h2>
+<hr class="half-width"><p>material on HPC types: <a href="https://www.hpc-carpentry.org/hpc-python/06-parallel/index.html" class="external-link uri">https://www.hpc-carpentry.org/hpc-python/06-parallel/index.html</a>,
+<a href="https://train.rse.ox.ac.uk/material/HPCu/high_performance_computing/hpc_parallel_intro/01_introduction" class="external-link uri">https://train.rse.ox.ac.uk/material/HPCu/high_performance_computing/hpc_parallel_intro/01_introduction</a></p>
 <!-- if only embarassingly parallel, rethink how sections work -->
 <p>We’ve talked about the different hardware components of an HPC
 cluster that determine the system’s computing power, bandwidth and
@@ -405,7 +415,7 @@ For this kind of tasks, all CPUs need to be part of the same node and have acces
 -->
 </div>
 <div class="section level3">
-<h3 id="message-parsing-interface-mpi-parallelism">Message Parsing Interface (MPI) parallelism<a class="anchor" aria-label="anchor" href="#message-parsing-interface-mpi-parallelism"></a></h3>
+<h3 id="message-parsing-interface-mpi-tightly-coupled-parallelism">Message Parsing Interface (MPI)/ Tightly coupled parallelism<a class="anchor" aria-label="anchor" href="#message-parsing-interface-mpi-tightly-coupled-parallelism"></a></h3>
 <p>Sometimes, jobs can be parallelised to an extent but cannot be run
 completely independently of each other, but need to exchange
 information. Generally this is the case because the different chunks of
@@ -416,6 +426,10 @@ important compared to an embarassingly parallel task.</p>
     constraints: memory, processors, discs. how do platforms differ? different kinds of HPC task require different resources (e.g. a lot of memory but little CPU vs lots of bandwidth)
     lots of computers that are similar to what your laptop but specialised
     specialist hardware matters because there are different types of computation which can rely heavily on the connection between the nodes. this gets us to high throughput vs high performance.
+
+
+    CPUs (flexible, resource-intensive) versus accelerators (do something repetitive very efficiently). e.g. for ML you need linear algebra where you need to do a lot of the same kind of calculation. These are simpler in some way because they are able to do fewer things but they are very efficient at doing the thing it was created to do.
+    flexibility vs speed
 -->
 <div id="will-it-embarassingly-parallel" class="callout challenge">
 <div class="callout-square">
@@ -434,7 +448,7 @@ important compared to an embarassingly parallel task.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -575,8 +589,8 @@ any links that you are not going to use.
   "url": "https://eirini-zormpa.github.io/hpc-intro/instructor/2-what-is-hpc.html",
   "identifier": "https://eirini-zormpa.github.io/hpc-intro/instructor/2-what-is-hpc.html",
   "dateCreated": "2025-11-14",
-  "dateModified": "2026-08-20",
-  "datePublished": "2026-08-20"
+  "dateModified": "2026-08-21",
+  "datePublished": "2026-08-21"
 }
 
   </script><script>

@@ -446,7 +446,7 @@ need?</h3>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>Analyse survey responses from 300 human participants.
@@ -932,7 +932,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-2-what-is-hpc"><p>Content from <a href="2-what-is-hpc.html">What is HPC?</a></p>
 <hr>
-<p>Last updated on 2026-08-20 |
+<p>Last updated on 2026-08-21 |
 
         <a href="hhttps://github.com/eirini-zormpa/hpc-intro/edit/main/episodes/2-what-is-hpc.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -986,12 +986,10 @@ more RAM than the compute nodes.</li>
 allow them to act as a seamless unit. These are usually InfiniBand or
 other high-speed Ethernet to meet the low-latency, high-bandwidth
 requirements of HPC clusters.</li>
-</ul>
-<!-- is this stupid xD --><ul>
 <li>cables connecting the different nodes</li>
 </ul>
-<figure><img src="files/clusters.png" alt="Schematic of an HPC cluster, from the Yale Center for Research Computing." class="figure mx-auto d-block"><div class="figcaption">Schematic of an HPC cluster, from the <a href="https://docs.ycrc.yale.edu/clusters-at-yale/" class="external-link">Yale Center for
-Research Computing.</a>
+<figure><img src="files/clusters.png" alt="Schematic of an HPC cluster, from the Yale Center for Research Computing (placeholder)." class="figure mx-auto d-block"><div class="figcaption">Schematic of an HPC cluster, from the <a href="https://docs.ycrc.yale.edu/clusters-at-yale/" class="external-link">Yale Center for
+Research Computing (placeholder).</a>
 </div>
 </figure><p>The components listed until now are all hardware. A very important
 piece of software when working on an HPC cluster is the <em>job
@@ -1003,10 +1001,12 @@ The scheduler uses this information to prioritise jobs and make as
 efficient use of the resources as possible. One of the most commonly
 used job schedulers is Slurm. There will be more information on Slurm in
 the following episode.</p>
-<!-- add more information on filesystems and memory >
-
-## Different types of HPC
-
+<!-- add more information on filesystems and memory -->
+</section><section><h2 class="section-heading" id="different-types-of-hpc">Different types of HPC<a class="anchor" aria-label="anchor" href="#different-types-of-hpc"></a>
+</h2>
+<hr class="half-width">
+<p>material on HPC types: <a href="https://www.hpc-carpentry.org/hpc-python/06-parallel/index.html" class="external-link uri">https://www.hpc-carpentry.org/hpc-python/06-parallel/index.html</a>,
+<a href="https://train.rse.ox.ac.uk/material/HPCu/high_performance_computing/hpc_parallel_intro/01_introduction" class="external-link uri">https://train.rse.ox.ac.uk/material/HPCu/high_performance_computing/hpc_parallel_intro/01_introduction</a></p>
 <!-- if only embarassingly parallel, rethink how sections work -->
 <p>We’ve talked about the different hardware components of an HPC
 cluster that determine the system’s computing power, bandwidth and
@@ -1040,7 +1040,7 @@ For this kind of tasks, all CPUs need to be part of the same node and have acces
 -->
 </div>
 <div class="section level3">
-<h3 id="message-parsing-interface-mpi-parallelism">Message Parsing Interface (MPI) parallelism<a class="anchor" aria-label="anchor" href="#message-parsing-interface-mpi-parallelism"></a>
+<h3 id="message-parsing-interface-mpi-tightly-coupled-parallelism">Message Parsing Interface (MPI)/ Tightly coupled parallelism<a class="anchor" aria-label="anchor" href="#message-parsing-interface-mpi-tightly-coupled-parallelism"></a>
 </h3>
 <p>Sometimes, jobs can be parallelised to an extent but cannot be run
 completely independently of each other, but need to exchange
@@ -1052,6 +1052,10 @@ important compared to an embarassingly parallel task.</p>
     constraints: memory, processors, discs. how do platforms differ? different kinds of HPC task require different resources (e.g. a lot of memory but little CPU vs lots of bandwidth)
     lots of computers that are similar to what your laptop but specialised
     specialist hardware matters because there are different types of computation which can rely heavily on the connection between the nodes. this gets us to high throughput vs high performance.
+
+
+    CPUs (flexible, resource-intensive) versus accelerators (do something repetitive very efficiently). e.g. for ML you need linear algebra where you need to do a lot of the same kind of calculation. These are simpler in some way because they are able to do fewer things but they are very efficient at doing the thing it was created to do.
+    flexibility vs speed
 -->
 <div id="will-it-embarassingly-parallel" class="callout challenge">
 <div class="callout-square">
@@ -1070,7 +1074,7 @@ important compared to an embarassingly parallel task.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1215,7 +1219,7 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  --></section></section><section id="aio-4-responsible-hpc"><p>Content from <a href="4-responsible-hpc.html">How to use HPC resources responsibly</a></p>
 <hr>
-<p>Last updated on 2026-05-28 |
+<p>Last updated on 2026-08-21 |
 
         <a href="hhttps://github.com/eirini-zormpa/hpc-intro/edit/main/episodes/4-responsible-hpc.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1263,6 +1267,8 @@ others?</li>
 </section><section><h2 class="section-heading" id="environmental-impact-of-hpc">Environmental impact of HPC<a class="anchor" aria-label="anchor" href="#environmental-impact-of-hpc"></a>
 </h2>
 <hr class="half-width">
+<p>these resources are free at the point of access but they do have
+significant costs</p>
 <div class="section level3">
 <h3 id="the-challenge-1">The challenge<a class="anchor" aria-label="anchor" href="#the-challenge-1"></a>
 </h3>
@@ -1326,8 +1332,8 @@ any links that you are not going to use.
   "url": "https://eirini-zormpa.github.io/hpc-intro/aio.html",
   "identifier": "https://eirini-zormpa.github.io/hpc-intro/aio.html",
   "dateCreated": "2025-11-14",
-  "dateModified": "2026-08-20",
-  "datePublished": "2026-08-20"
+  "dateModified": "2026-08-21",
+  "datePublished": "2026-08-21"
 }
 
   </script><script>
