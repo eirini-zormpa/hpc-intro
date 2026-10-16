@@ -17,7 +17,7 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-<!-- Looking at both the hardware and software aspects of HPC.
+<!-- 
 The hardware that makes up the cluster. often dedicated to efficiently support different kinds of computing
 all clusters need processors - there are different kinds of processors - traditionally CPUs which are very flexible etc but at a cost i.e. resource (space on the chip etc)
 people looked at accelerators, e.g. GPU traditionally focused on graphics etc.
@@ -28,24 +28,31 @@ doing computation efficiently - tghtly coupled vs embarassingly parallel (most A
 -->
 
 ## HPC clusters 101
+Now that we have a better idea of how HPC can be deployed to answer questions in different scientific fields, let's take a closer look at the software and hardware that make up a cluster.
 
-The previous episode already established that HPC clusters are made up of computers, which we call nodes, which are connected through a, typically high-speed, network.
+The previous episode already established that HPC clusters are made up of computers, called nodes, which are connected through a network, typically a high-speed one.
 Let's now dig into the different components of an HPC cluster and see how they work together.
+
 HPC clusters will generally require the following basic components:
 
-- nodes. There are different types of with specialised uses:
-  - interactive (or login) nodes are used to access the cluster
-  - compute node are used to run jobs. There are numerous compute nodes in a cluster.
-  - storage, where files are stored. The nodes used for storage may have more RAM than the compute nodes.
-- a switch, which connects the login, compute, and storage nodes to allow them to act as a seamless unit. These are usually InfiniBand or other high-speed Ethernet to meet the low-latency, high-bandwidth requirements of HPC clusters.
+- interactive (or login) nodes, used to access the cluster
+- compute nodes, used to run jobs
+- storage, where data are stored
+- a switch, which connects the login, compute, and storage nodes allowing them to act as a seamless unit. These are usually InfiniBand or other high-speed Ethernet to meet the low-latency, high-bandwidth requirements of HPC clusters.
 - cables connecting the different nodes
 
-![Schematic of an HPC cluster, from the [Yale Center for Research Computing (placeholder).](https://docs.ycrc.yale.edu/clusters-at-yale/)](files/clusters.png)
+Let's see how some of these components look like in our own mini HPC cluster:
+
+![Anatomy of our mini HPC cluster.](files/cluster-infographic-small.png)
+
+<!--
+explain PoE HATs/CPU/RAM and perhaps how the power distribution unit fits in
+-->
 
 The components listed until now are all hardware.
 A very important piece of software when working on an HPC cluster is the _job scheduler_.
 A job scheduler is essential because the resources of an HPC cluster are finite and the demand on those resources is usually very high.
-When submitting a job, users have to specify how many resources (RAM and GPUs) they require and how long they expect their job to take.
+When submitting a job, users have to specify how many resources (RAM and CPUs or GPUs) they require and how long they expect their job to take.
 The scheduler uses this information to prioritise jobs and make as efficient use of the resources as possible.
 One of the most commonly used job schedulers is Slurm.
 There will be more information on Slurm in the following episode.
@@ -54,9 +61,7 @@ There will be more information on Slurm in the following episode.
 
 ## Different types of HPC
 
-material on HPC types: https://www.hpc-carpentry.org/hpc-python/06-parallel/index.html, https://train.rse.ox.ac.uk/material/HPCu/high_performance_computing/hpc_parallel_intro/01_introduction
-
-<!-- if only embarassingly parallel, rethink how sections work -->
+<!--material on HPC types: https://www.hpc-carpentry.org/hpc-python/06-parallel/index.html, https://train.rse.ox.ac.uk/material/HPCu/high_performance_computing/hpc_parallel_intro/01_introduction -->
 
 We've talked about the different hardware components of an HPC cluster that determine the system's computing power, bandwidth and memory storage.
 These can be configured in bespoke ways to suit the type of problem at hand.
@@ -82,7 +87,8 @@ Here, CPUs are able to work on tasks independently, but they all need access to 
 
 For this kind of tasks, all CPUs need to be part of the same node and have access to the same RAM.
 -->
-### Message Parsing Interface (MPI)/ Tightly coupled parallelism
+
+### Tightly coupled parallelism
 
 Sometimes, jobs can be parallelised to an extent but cannot be run completely independently of each other, but need to exchange information.
 Generally this is the case because the different chunks of the task that needs to be completed can only be in a certain order.
@@ -90,30 +96,28 @@ Generally this is the case because the different chunks of the task that needs t
 In those cases, a high-speed low-latency interconnect is much more important compared to an embarassingly parallel task.
 
 <!--
-    constraints: memory, processors, discs. how do platforms differ? different kinds of HPC task require different resources (e.g. a lot of memory but little CPU vs lots of bandwidth)
-    lots of computers that are similar to what your laptop but specialised
-    specialist hardware matters because there are different types of computation which can rely heavily on the connection between the nodes. this gets us to high throughput vs high performance.
 
-
-    CPUs (flexible, resource-intensive) versus accelerators (do something repetitive very efficiently). e.g. for ML you need linear algebra where you need to do a lot of the same kind of calculation. These are simpler in some way because they are able to do fewer things but they are very efficient at doing the thing it was created to do.
+CPUs (flexible, resource-intensive) versus accelerators (do something repetitive very efficiently). e.g. for ML you need linear algebra where you need to do a lot of the same kind of calculation. These are simpler in some way because they are able to do fewer things but they are very efficient at doing the thing it was created to do.
     flexibility vs speed
 -->
 
 
-
 ::::::::::::::::::::::::::::::::::::: challenge 
 
-## Will it embarassingly parallel
+## Parallelisation scenarios
 
-<!--     exercise: example problems and ask if it's embarassingly parallel. are we able to give people enough information? could also be a discussion in a small group. props? knitting metaphor or addition -->
+For each of the following cases, consider how independent the constituent tasks are:
+- Number addition
+- Search in a database
+- Analysis pipeline: read in data, clean, and model it
 
 :::::::::::::::::::::::: solution 
 
 ## Solution
  
-```output
-[1] "This new lesson looks good"
-```
+- Completely independent, as numbers can be added in any order and the outcome is the same
+- Fairly independent, but dependent on goal. If the goal is just finding a keyword, a database can be split into multiple chunks that can be searched independently.
+- Each individual step may be parallelised, but the steps themselves need to happen sequentially
 
 :::::::::::::::::::::::::::::::::
 
