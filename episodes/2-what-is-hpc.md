@@ -107,6 +107,7 @@ CPUs (flexible, resource-intensive) versus accelerators (do something repetitive
 ## Parallelisation scenarios
 
 For each of the following cases, consider how independent the constituent tasks are:
+
 - Number addition
 - Search in a database
 - Analysis pipeline: read in data, clean, and model it
