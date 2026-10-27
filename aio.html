@@ -477,7 +477,7 @@ variables.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li>Analyse survey responses from 300 human participants.
@@ -1197,7 +1197,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-3-hpc-workflow"><p>Content from <a href="3-hpc-workflow.html">What does an HPC workflow look like?</a></p>
 <hr>
-<p>Last updated on 2026-10-22 |
+<p>Last updated on 2026-10-27 |
 
         <a href="hhttps://github.com/eirini-zormpa/hpc-intro/edit/main/episodes/3-hpc-workflow.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1303,6 +1303,7 @@ transfer large files more quickly than <code>scp</code>.</p>
 <p>For more information, please refer to the “Transferring Files with
 Remote Computers” episode, specifically from the section <a href="https://carpentries-incubator.github.io/hpc-intro/16-transferring-files.html#transferring-single-files-and-folders-with-scp" class="external-link">Transferring
 Single Files and Folders with scp</a> onwards.</p>
+<!-- would this be a good place to talk about back-ups?-->
 </div>
 <div class="section level3">
 <h3 id="compiling-the-code">Compiling the code<a class="anchor" aria-label="anchor" href="#compiling-the-code"></a>
@@ -1313,11 +1314,11 @@ able to understand this! Different programming languages take different
 approaches to how they turn human-readable instructions to
 machine-readable ones, leading to the distinction between
 <em>compiled</em> languages and <em>interpreted</em> ones. In compiled
-languages (like C, C++ and Fortan), a distinct step is required after
+languages (like C, C++ and Fortran), a distinct step is required after
 the code being written and before it is executed. During compilation,
 the human-readable instructions are turned to binary code (1s and 0s)
 that the computer can read. Interpreted languages (like Python, R, and
-Matlab) are interpreted while they are being run and do not require a
+MATLAB) are interpreted while they are being run and do not require a
 separate step. However, compiled languages are significantly faster to
 run, which becomes only more important in HPC systems that rely on
 efficiency. Thankfully, it is possible to use wrappers around
@@ -1353,7 +1354,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-4-responsible-hpc"><p>Content from <a href="4-responsible-hpc.html">How to use HPC resources responsibly</a></p>
 <hr>
-<p>Last updated on 2026-08-21 |
+<p>Last updated on 2026-10-27 |
 
         <a href="hhttps://github.com/eirini-zormpa/hpc-intro/edit/main/episodes/4-responsible-hpc.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1387,30 +1388,158 @@ others?</li>
 </div>
 </div>
 </div>
+<p>HPC and other computing facilities are free at the point of access,
+but they do come with significant monetary and environmental costs. This
+is something that both the people running and using those facilities
+need to be mindful of.</p>
 <section><h2 class="section-heading" id="sharing-resources">Sharing resources<a class="anchor" aria-label="anchor" href="#sharing-resources"></a>
 </h2>
 <hr class="half-width">
+<p>HPC facilities are used by a large number of people. Like with all
+shared resources, it’s important that all users are mindful of how their
+actions impact other users.</p>
+<p>In the following paragraphs, you will learn about some common
+considerations when using HPC facilities. These have been adapted from
+the <a href="https://carpentries-incubator.github.io/hpc-intro/18-resources.html" class="external-link">Using
+resources effectively</a> and [Using shared resources responsibly(<a href="https://carpentries-incubator.github.io/hpc-intro/19-responsibility.html" class="external-link uri">https://carpentries-incubator.github.io/hpc-intro/19-responsibility.html</a>)
+episodes of the HPC Carpentry lesson <a href="https://carpentries-incubator.github.io/hpc-intro/index.html" class="external-link">Using
+High-Performance Computing Systems</a> and you can find more detail
+there.</p>
 <div class="section level3">
-<h3 id="the-challenge">The challenge<a class="anchor" aria-label="anchor" href="#the-challenge"></a>
+<h3 id="make-code-efficient">Make code efficient<a class="anchor" aria-label="anchor" href="#make-code-efficient"></a>
 </h3>
+<p>Code efficiency essentially means running that code for as few
+resources as possible. Efficient code will generally run faster, saving
+costs on expensive compute time and freeing up the resource for others
+to use. It generally also uses less electricity, which helps keep the
+environmental impact of HPC as low as possible (more on this in the
+following section).</p>
+<p>Writing efficient code is often tied to using good software
+engineering practice; if you are not sure how to do this, consider
+getting help from your local Research Software Engineering team.</p>
+<p>Once the code has been made as efficient as possible, it is important
+to be accurate in requesting resources to run it. That is, if the code
+runs in 2 hours over 4 nodes, it is important that this (or slightly
+more) is how much resource you request.</p>
 </div>
 <div class="section level3">
-<h3 id="steps-to-mitigate-impact">Steps to mitigate impact<a class="anchor" aria-label="anchor" href="#steps-to-mitigate-impact"></a>
+<h3 id="dont-clog-up-the-login-nodes">Don’t clog up the login nodes<a class="anchor" aria-label="anchor" href="#dont-clog-up-the-login-nodes"></a>
 </h3>
+<p>Login nodes are shared across multiple (or even all) cluster users
+and are reserved for specific actions, most importantly launching jobs.
+Running resource-intensive jobs (like doing heavy computations) should
+be avoided as it could negatively affect others’ ability to use the
+cluster.</p>
+</div>
+<div class="section level3">
+<h3 id="test-code-before-scaling">Test code before scaling<a class="anchor" aria-label="anchor" href="#test-code-before-scaling"></a>
+</h3>
+<p>Make sure your code runs (both locally and on the cluster) before
+dedicating a lot of resource on it. On busy HPC facilities, you may have
+to wait for days before there is enough resource to run your job, so you
+want to make sure your code will run successfully, or give you useful
+information even if it fails. Having code fail within a few seconds when
+it has been allocated hours of compute time is both frustrating for you
+and wasteful for others who aren’t able to use the resources while they
+are sitting idle.</p>
+<p>Testing your code on a small subset of data (or in a similarly
+scaled-down manner) helps avoid glaring errors that cause the code to
+fail. Most systems will provide a way to test code before running the
+whole job.</p>
 </div>
 </section><section><h2 class="section-heading" id="environmental-impact-of-hpc">Environmental impact of HPC<a class="anchor" aria-label="anchor" href="#environmental-impact-of-hpc"></a>
 </h2>
 <hr class="half-width">
-<p>these resources are free at the point of access but they do have
-significant costs</p>
-<div class="section level3">
-<h3 id="the-challenge-1">The challenge<a class="anchor" aria-label="anchor" href="#the-challenge-1"></a>
-</h3>
+<p>Before we focus on how HPC and large-scale computing fit into this,
+the main point to establish is that human activity has had catastrophic
+impacts on the Earth and the climate. One contributing factor is the
+increase in the emission of greenhouse gases, e.g. carbon dioxide (CO2),
+primarily through the burning of fossil fuels. These emissions have
+risen steadily since the Industrial Revolution in the late 18th century
+and have led to long-term heating of Earth’s climate system. Without
+urgent and radical action, the Earth’s average temperature will rise by
+4-5 degrees Celsius by the end of the 21st century. This xkcd comic
+illustrates how extraordinary that is.</p>
+<figure><img src="https://imgs.xkcd.com/comics/4_5_degrees.png" class="figure mx-auto d-block"></figure><p>Credit: Randal Munroe of xkcd comics (<a href="https://xkcd.com/1379/" class="external-link uri">https://xkcd.com/1379/</a>),
+reshared under a <a href="https://creativecommons.org/licenses/by-nc/2.5/" class="external-link">CC-BY-NC
+licence</a>.</p>
+<p>Although CO2 emissions are only part of the problem, they are what is
+most relevant to HPC and, as such, will be the focus of this
+section.</p>
+<div id="net-zero-and-carbon-neutral" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Callout</span>
+<div id="net-zero-and-carbon-neutral" class="callout-inner">
+<h3 class="callout-title">Net zero and carbon neutral</h3>
+<div class="callout-content">
+<p>Eliminating emissions is more important and more impactful than
+neutralising them.</p>
+</div>
+</div>
+</div>
+<p>We can think about emissions as they relate to different stages of
+HPC usage:</p>
+<ul>
+<li>embodied emissions</li>
+<li>operational emissions</li>
+<li>downstream emissions</li>
+</ul>
+<p>Starting with <em>embodied emissions</em>, these relate to emissions
+associated with the creation of the HPC facility. These include
+emissions from mining and transporting rare-earth minerals,
+manufacturing and transporting hardware and construction of the building
+housing the HPC facility. That is, all the emissions that needed to
+happen for the HPC facility to exist in the first place.</p>
+<p><em>Operational emissions</em> relate to emissions associated with
+the everyday running of the HPC facility. These include emissions from
+producing electricity to power and cool the hardware that make up the
+facility and transport for the staff that operate the facility. If one
+were to include long-haul flights for staff to attend international
+conferences, this would be the largest contribution to CO2
+emissions.</p>
+<p><em>Downstream emissions</em> relate to emissions associated with
+products of the HPC facility. For example, a software application that
+is developed using an HPC facility and is adopted by other users;
+emissions associated with its use would be downstream emissions.</p>
 <div class="section level3">
-<h3 id="steps-to-mitigate-impact-1">Steps to mitigate impact<a class="anchor" aria-label="anchor" href="#steps-to-mitigate-impact-1"></a>
+<h3 id="limiting-emissions">Limiting emissions<a class="anchor" aria-label="anchor" href="#limiting-emissions"></a>
 </h3>
-<p>See: <a href="https://imperialcollegelondon.github.io/digital_research_sustainability_training/index.html" class="external-link uri">https://imperialcollegelondon.github.io/digital_research_sustainability_training/index.html</a></p>
+<p>It is important to keep in mind that the best thing to do is to stop
+emissions as much as possible. The environmental crisis we are facing
+will not be solved purely through individual action, but it is important
+to acknowledge that we each have a part to play. The most impactful
+think you can do is to mobilise - talk to people at your institution to
+raise awareness and to change institutional practices in a way that
+minimises environmental cost.</p>
+<p>When it comes to embodied emissions, the people who can effect the
+most change are ones making decisions about how the facility is built.
+Some things to consider are:</p>
+<ul>
+<li>Using refurbished hardware or hardware made with recycled materials
+to avoid emissions associated with mining. Note that mining is also very
+polluting and harmful to the people living near mining sites,
+predominantly in the Global South.</li>
+<li>Building HPC facilities in areas that have plentiful clean and/or
+renewable energy and that require as little cooling (or in rare cases
+heating) as possible.</li>
+<li>Keeping hardware in use for as long as they are functional and
+repairing instead of replacing them.</li>
+</ul>
+<p>In terms of operational emissions, you can:</p>
+<ul>
+<li>Educate researchers about what applications would benefit from the
+use of HPC and for which it is not necessary.</li>
+<li>Signpost researchers to training on how to make their code
+efficient.</li>
+<li>Advocate for your facility to get the <a href="https://www.software.ac.uk/GreenDiSC" class="external-link">Green DiSC
+certification</a>.</li>
+</ul>
+<p>The content presented in this section was inspired by the <a href="https://imperialcollegelondon.github.io/digital_research_sustainability_training/index.html" class="external-link">Digital
+Research Sustainability lesson</a> created at Imperial College London
+and the <a href="https://epcced.github.io/2026-10-02_green-hpc_cambridge/instructor/index.html" class="external-link">Green
+Software Use on HPC lesson</a> created at EPCC.</p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
