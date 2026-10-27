@@ -72,14 +72,16 @@ A more advanced option is `rsync` which allows you to transfer large files more 
 
 For more information, please refer to the "Transferring Files with Remote Computers" episode, specifically from the section [Transferring Single Files and Folders with scp](https://carpentries-incubator.github.io/hpc-intro/16-transferring-files.html#transferring-single-files-and-folders-with-scp) onwards.
 
+<!-- would this be a good place to talk about back-ups?-->
+
 ### Compiling the code
 
 When humans write code, they use programming languages that are fairly straightforward for them to interpret.
 However, computers aren't able to understand this!
 Different programming languages take different approaches to how they turn human-readable instructions to machine-readable ones, leading to the distinction between _compiled_ languages and _interpreted_ ones.
-In compiled languages (like C, C++ and Fortan), a distinct step is required after the code being written and before it is executed.
+In compiled languages (like C, C++ and Fortran), a distinct step is required after the code being written and before it is executed.
 During compilation, the human-readable instructions are turned to binary code (1s and 0s) that the computer can read.
-Interpreted languages (like Python, R, and Matlab) are interpreted while they are being run and do not require a separate step.
+Interpreted languages (like Python, R, and MATLAB) are interpreted while they are being run and do not require a separate step.
 However, compiled languages are significantly faster to run, which becomes only more important in HPC systems that rely on efficiency.
 Thankfully, it is possible to use wrappers around interpreted languages, which allows researchers to write their code in, for example, Python and still run it on an HPC cluster in an efficient manner.
 
