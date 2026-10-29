@@ -29,11 +29,11 @@ The basic steps are displayed in this diagram:
 Once a researcher has established that their project would benefit from using HPC, they need to find out what HPC resources are available to them through their institution.
 As research facilitators, you are likely one of the people who would help them with this!
 Researchers will generally have access to a local HPC facility, managed by their institution, a regional or national one.
-At the time of writing (late 2026), the UK national supercomputing service is [ARCHER2](https://www.archer2.ac.uk/), hosted by EPCC.
-Examples of regional (Tier-2) HPC facilities in the UK are: [Baskerville](https://www.baskerville.ac.uk/) and [CSD3](https://www.hpc.cam.ac.uk/high-performance-computing).
-Support with more explicitly AI projects is provided by [IsembardAI](https://docs.isambard.ac.uk/), hosted by the Bristol Centre for Supercomputing.
-A list of HPC facilities in the UK can be found on the [HPC-UK website](https://www.hpc-uk.ac.uk/facilities/) and a list of what access different UK universities have to local and regional HPC facilities can be found on [Zenodo](https://doi.org/10.5281/zenodo.21977720).
-Note that this is a changing landscape, which will develop in accordance to the joint DSIT and UKRI  policy paper on the [UK Compute Roadmap](https://www.gov.uk/government/publications/uk-compute-roadmap/uk-compute-roadmap).
+At the time of writing (late 2026), the UK national supercomputing service is [ARCHER2](https://www.archer2.ac.uk/){target="_blank"}, hosted by EPCC.
+Examples of regional (Tier-2) HPC facilities in the UK are: [Baskerville](https://www.baskerville.ac.uk/){target="_blank"} and [CSD3](https://www.hpc.cam.ac.uk/high-performance-computing){target="_blank"}.
+Support with more explicitly AI projects is provided by [IsembardAI](https://docs.isambard.ac.uk/){target="_blank"}, hosted by the Bristol Centre for Supercomputing.
+A list of HPC facilities in the UK can be found on the [HPC-UK website](https://www.hpc-uk.ac.uk/facilities/){target="_blank"} and a list of what access different UK universities have to local and regional HPC facilities can be found on [Zenodo](https://doi.org/10.5281/zenodo.21977720){target="_blank"}.
+Note that this is a changing landscape, which will develop in accordance to the joint DSIT and UKRI  policy paper on the [UK Compute Roadmap](https://www.gov.uk/government/publications/uk-compute-roadmap/uk-compute-roadmap){target="_blank"}.
 Once the researcher has identified a suitable HPC facility, they will need to follow that facility's instructions on gaining access.
 
 ### Logging in
@@ -53,7 +53,7 @@ ssh [whatever the name ends up being]
 
 We are now in the dedicated login node that was mentioned in the previous episode! 
 
-For more information, please refer to the HPC Carpentry episode on [Connecting Securely to an HPC Cluster](https://carpentries-incubator.github.io/hpc-intro/11-connecting.html).
+For more information, please refer to the HPC Carpentry episode on [Connecting Securely to an HPC Cluster](https://carpentries-incubator.github.io/hpc-intro/11-connecting.html){target="_blank"}.
 
 ### Transferring files
 
@@ -70,7 +70,7 @@ local$ scp local_file user@cluster.name:remote_destination
 
 A more advanced option is `rsync` which allows you to transfer large files more quickly than `scp`.
 
-For more information, please refer to the "Transferring Files with Remote Computers" episode, specifically from the section [Transferring Single Files and Folders with scp](https://carpentries-incubator.github.io/hpc-intro/16-transferring-files.html#transferring-single-files-and-folders-with-scp) onwards.
+For more information, please refer to the "Transferring Files with Remote Computers" episode, specifically from the section [Transferring Single Files and Folders with scp](https://carpentries-incubator.github.io/hpc-intro/16-transferring-files.html#transferring-single-files-and-folders-with-scp){target="_blank"} onwards.
 
 <!-- would this be a good place to talk about back-ups?-->
 
@@ -79,13 +79,14 @@ For more information, please refer to the "Transferring Files with Remote Comput
 When humans write code, they use programming languages that are fairly straightforward for them to interpret.
 However, computers aren't able to understand this!
 Different programming languages take different approaches to how they turn human-readable instructions to machine-readable ones, leading to the distinction between _compiled_ languages and _interpreted_ ones.
-In compiled languages (like C, C++ and Fortran), a distinct step is required after the code being written and before it is executed.
+In compiled languages (like C, C++ and Fortran), a distinct step is required after the code is written and before it is executed.
 During compilation, the human-readable instructions are turned to binary code (1s and 0s) that the computer can read.
 Interpreted languages (like Python, R, and MATLAB) are interpreted while they are being run and do not require a separate step.
-However, compiled languages are significantly faster to run, which becomes only more important in HPC systems that rely on efficiency.
+However, compiled languages are significantly faster to run, which becomes more important in HPC systems that rely on efficiency.
 Thankfully, it is possible to use wrappers around interpreted languages, which allows researchers to write their code in, for example, Python and still run it on an HPC cluster in an efficient manner.
+Each language will have its own way of using wrappers, so please refer to the documentation of your preferred language.
 
-For more information, please refer to the [Building and Running C/C++/Fortran Codes on HPC Systems](https://learning.rc.virginia.edu/notes/building-running-c-cpp-fortran/) lesson.
+For more information, please refer to the [Building and Running C/C++/Fortran Codes on HPC Systems](https://learning.rc.virginia.edu/notes/building-running-c-cpp-fortran/){target="_blank"} lesson.
 
 ### Submitting a job to the cluster
 

@@ -27,14 +27,16 @@ HPC facilities are used by a large number of people.
 Like with all shared resources, it's important that all users are mindful of how their actions impact other users.
 
 In the following paragraphs, you will learn about some common considerations when using HPC facilities.
-These have been adapted from the [Using resources effectively](https://carpentries-incubator.github.io/hpc-intro/18-resources.html) and [Using shared resources responsibly(https://carpentries-incubator.github.io/hpc-intro/19-responsibility.html) episodes of the HPC Carpentry lesson [Using High-Performance Computing Systems](https://carpentries-incubator.github.io/hpc-intro/index.html) and you can find more detail there.
+These have been adapted from the [Using resources effectively](https://carpentries-incubator.github.io/hpc-intro/18-resources.html){target="_blank"} and [Using shared resources responsibly](https://carpentries-incubator.github.io/hpc-intro/19-responsibility.html){target="_blank"} episodes of the HPC Carpentry lesson [Using High-Performance Computing Systems](https://carpentries-incubator.github.io/hpc-intro/index.html){target="_blank"} and you can find more detail there.
 
 ### Make code efficient
-Code efficiency essentially means running that code for as few resources as possible.
+Code efficiency essentially means running that code using as few resources as possible.
 Efficient code will generally run faster, saving costs on expensive compute time and freeing up the resource for others to use.
 It generally also uses less electricity, which helps keep the environmental impact of HPC as low as possible (more on this in the following section).
 
 Writing efficient code is often tied to using good software engineering practice; if you are not sure how to do this, consider getting help from your local Research Software Engineering team.
+
+<!-- explain why requesting too many AND too few resources is an issue-->
 
 Once the code has been made as efficient as possible, it is important to be accurate in requesting resources to run it.
 That is, if the code runs in 2 hours over 4 nodes, it is important that this (or slightly more) is how much resource you request.
@@ -42,7 +44,7 @@ That is, if the code runs in 2 hours over 4 nodes, it is important that this (or
 ### Don't clog up the login nodes
 
 Login nodes are shared across multiple (or even all) cluster users and are reserved for specific actions, most importantly launching jobs.
-Running resource-intensive jobs (like doing heavy computations) should be avoided as it could negatively affect others' ability to use the cluster.
+Running resource-intensive jobs (like doing heavy computations) should be avoided as it could negatively affect others' ability to use the cluster; these should only be run on compute nodes.
 
 ### Test code before scaling
 
@@ -63,7 +65,7 @@ This xkcd comic illustrates how extraordinary that is.
 
 ![](https://imgs.xkcd.com/comics/4_5_degrees.png)
 
-Credit: Randal Munroe of xkcd comics (https://xkcd.com/1379/), reshared under a [CC-BY-NC licence](https://creativecommons.org/licenses/by-nc/2.5/).
+Credit: Randal Munroe of [xkcd comics](https://xkcd.com/1379/){target="_blank"}, reshared under a [CC-BY-NC licence](https://creativecommons.org/licenses/by-nc/2.5/){target="_blank"}.
 
 Although CO2 emissions are only part of the problem, they are what is most relevant to HPC and, as such, will be the focus of this section.
 
@@ -95,7 +97,7 @@ For example, a software application that is developed using an HPC facility and 
 ### Limiting emissions
 It is important to keep in mind that the best thing to do is to stop emissions as much as possible.
 The environmental crisis we are facing will not be solved purely through individual action, but it is important to acknowledge that we each have a part to play.
-The most impactful think you can do is to mobilise - talk to people at your institution to raise awareness and to change institutional practices in a way that minimises environmental cost.
+The most impactful thing you can do is to mobilise - talk to people at your institution to raise awareness and to change institutional practices in a way that minimises environmental cost.
 
 When it comes to embodied emissions, the people who can effect the most change are ones making decisions about how the facility is built.
 Some things to consider are:
@@ -108,6 +110,6 @@ In terms of operational emissions, you can:
 
 - Educate researchers about what applications would benefit from the use of HPC and for which it is not necessary.
 - Signpost researchers to training on how to make their code efficient.
-- Advocate for your facility to get the [Green DiSC certification](https://www.software.ac.uk/GreenDiSC).
+- Advocate for your facility to get the [Green DiSC certification](https://www.software.ac.uk/GreenDiSC){target="_blank"}.
 
-The content presented in this section was inspired by the [Digital Research Sustainability lesson](https://imperialcollegelondon.github.io/digital_research_sustainability_training/index.html) created at Imperial College London and the [Green Software Use on HPC lesson](https://epcced.github.io/2026-10-02_green-hpc_cambridge/instructor/index.html) created at EPCC.
+The content presented in this section was inspired by the [Digital Research Sustainability lesson](https://imperialcollegelondon.github.io/digital_research_sustainability_training/index.html){target="_blank"} created at Imperial College London and the [Green Software Use on HPC lesson](https://epcced.github.io/2026-10-02_green-hpc_cambridge/instructor/index.html){target="_blank"} created at EPCC.

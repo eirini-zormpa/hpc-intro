@@ -28,10 +28,10 @@ What Digital Research Infrastructure facilities are you aware of in your institu
 
 :::::::::::::::::::::::::::::::::
 
-Scientific research is becoming increasingly computational, relying on large datasets and advanced computing power [(Foster, 2011)](https://doi.org/10.7208/9780226038322-002).
+Scientific research is becoming increasingly computational, relying on large datasets and advanced computing power [(Foster, 2011)](https://doi.org/10.7208/9780226038322-002){target="_blank"}.
 This feels intuitively true, but it has also been verified by studies which have tried to quantify this change:
-One study looking at the size of medical image datasets used for research found that the size of the median dataset in 2018 was up to 10 times larger compared to 2011 ([Kiryati & Landau, 2021](https://doi.org/10.3390/jimaging7080155)).
-Another study, looking at big data in industry and academia, expects the data that CERN records in a year to increase from 160 petabytes in 2018 to 800 petabytes in 2026, a more than fourfold increase of an already huge amount of data ([Clissa, Lassnig, & Rinaldi, 2023](https://doi.org/10.3389/fdata.2023.1271639)).
+One study looking at the size of medical image datasets used for research found that the size of the median dataset in 2018 was up to 10 times larger compared to 2011 ([Kiryati & Landau, 2021](https://doi.org/10.3390/jimaging7080155){target="_blank"}).
+Another study, looking at big data in industry and academia, expects the data that CERN records in a year to increase from 160 petabytes in 2018 to 800 petabytes in 2026, a more than fourfold increase of an already huge amount of data ([Clissa, Lassnig, & Rinaldi, 2023](https://doi.org/10.3389/fdata.2023.1271639){target="_blank"}).
 
 In addition to ever-growing dataset size, scientists are also increasingly turning to computational methods.
 For example, biology used to be a discipline based exclusively in a wet lab, but bioinformatics over the last few decades has become a substantial percentage of biological research.
@@ -139,13 +139,13 @@ The calculations supporting such theoretical work was undertaken using supercomp
 A statistic that does a great job of illustrating the magnitude of computing power necessary for this work is that a single analysis, done as part of verifying the SgrA* image, required 100 million CPU hours, spread across the two aforementioned NSF supercomputers.
 
 #### Sources and further reading
-- Press release (April 10, 2019): Astronomers Capture First Image of a Black Hole ([link to press release on EHT website](https://eventhorizontelescope.org/press-release-april-10-2019-astronomers-capture-first-image-black-hole))
-- Why is it important to study black holes? What is there to learn from the EHT observations? ([link to the Event Horizon Telescape FAQ](https://eventhorizontelescope.org/faq/why-it-important-study-black-holes-what-there-be-learned-eht-observations))
-- How much data is recorded during an observation and how is it transferred to the central processing facilities? ([link to the Event Horizon Telescape FAQ](https://eventhorizontelescope.org/faq))
-- HPC supports first black hole image ([link to Partnership for Advanced Computing in Europe (PRACE) website](https://prace-ri.eu/hpc-supports-first-black-hole-image/))
-- Event Horizon Telescope Technology ([link to the EHT website on Technology topics](https://eventhorizontelescope.org/technology))
-- We got it! Astronomers reveal first image of the black hole at the heart of our galaxy ([link to NSF website](https://www.nsf.gov/news/we-got-it-astronomers-reveal-first-image-black-hole-heart))
-- Anatomy of a Black Hole ([link to NASA website](https://science.nasa.gov/universe/black-holes/anatomy/))
+- Press release (April 10, 2019): Astronomers Capture First Image of a Black Hole ([link to press release on EHT website](https://eventhorizontelescope.org/press-release-april-10-2019-astronomers-capture-first-image-black-hole){target="_blank"}).
+- Why is it important to study black holes? What is there to learn from the EHT observations? ([link to the Event Horizon Telescape FAQ](https://eventhorizontelescope.org/faq/why-it-important-study-black-holes-what-there-be-learned-eht-observations){target="_blank"}).
+- How much data is recorded during an observation and how is it transferred to the central processing facilities? ([link to the Event Horizon Telescape FAQ](https://eventhorizontelescope.org/faq){target="_blank"}).
+- HPC supports first black hole image ([link to Partnership for Advanced Computing in Europe (PRACE) website](https://prace-ri.eu/hpc-supports-first-black-hole-image/)).
+- Event Horizon Telescope Technology ([link to the EHT website on Technology topics](https://eventhorizontelescope.org/technology){target="_blank"}).
+- We got it! Astronomers reveal first image of the black hole at the heart of our galaxy ([link to NSF website](https://www.nsf.gov/news/we-got-it-astronomers-reveal-first-image-black-hole-heart){target="_blank"}).
+- Anatomy of a Black Hole ([link to NASA website](https://science.nasa.gov/universe/black-holes/anatomy/){target="_blank"}).
 
 ### Case study 2: Biology
 Another well-publicised piece of research that made heavy use of HPC is AlphaFold.
@@ -172,7 +172,7 @@ The AlphaFold 2 system was announced as being equally accurate to experimental m
 #### How did HPC contribute?
 The use of HPC was fundamental in the development of AlphaFold and remains important for its use.
 In developing AlphaFold, both large amounts of data and complex resource-intensive software was required.
-Starting with data, AlphaFold was trained on very large biological datasets: Specifically on the experimentally-determined 3D structures of proteins in the [Protein Data Bank](https://www.wwpdb.org/) and their corresponding amino acid sequences in [UniProt](https://www.uniprot.org/).
+Starting with data, AlphaFold was trained on very large biological datasets: Specifically on the experimentally-determined 3D structures of proteins in the [Protein Data Bank](https://www.wwpdb.org/){target="_blank"} and their corresponding amino acid sequences in [UniProt](https://www.uniprot.org/){target="_blank"}.
 An innovation that contributed to the success of AlphaFold was the use of evolutionary covariation data.
 Evolutionary covariation is based on the observation that after one amino acid in a protein becomes mutated over evolutionary time, a compensatory mutation in another amino acid often occurs to maintain the structure or to restore the function of the protein.
 This can indicate that these two amino acids are in direct physical contact in the folded protein, giving clues to the protein's overall 3D structure.
@@ -191,11 +191,11 @@ For example, the installation instructions on the AlphaFold GitHub repository as
 
 #### Sources and further reading
 
-- Improved protein structure prediction using potentials from deep learning ([link to academic publication on AlphaFold 2](https://doi.org/10.1038/s41586-019-1923-7))
-- AlphaFold uses open data and AI to discover the 3D protein universe ([link to blog post on EMBL.org](https://www.embl.org/news/science/alphafold-using-open-data-and-ai-to-discover-the-3d-protein-universe))
-- Open access to predicted proteins via AlphaFold Protein Structure Database ([link to EMBL-EBI database](https://alphafold.ebi.ac.uk/))
-- Online training on AlphaFold ([link to EMBL-EBI training](https://www.ebi.ac.uk/training/online/courses/alphafold/))
-- AlphaFold GitHub repository ([link](https://github.com/google-deepmind/alphafold))
+- Improved protein structure prediction using potentials from deep learning ([link to academic publication on AlphaFold 2](https://doi.org/10.1038/s41586-019-1923-7){target="_blank"}).
+- AlphaFold uses open data and AI to discover the 3D protein universe ([link to blog post on EMBL.org](https://www.embl.org/news/science/alphafold-using-open-data-and-ai-to-discover-the-3d-protein-universe){target="_blank"}).
+- Open access to predicted proteins via AlphaFold Protein Structure Database ([link to EMBL-EBI database](https://alphafold.ebi.ac.uk/){target="_blank"})
+- Online training on AlphaFold ([link to EMBL-EBI training](https://www.ebi.ac.uk/training/online/courses/alphafold/){target="_blank"}).
+- AlphaFold GitHub repository ([link](https://github.com/google-deepmind/alphafold){target="_blank"}).
 
 ### Case study 3: Digital Humanities
 Although HPC is most commonly used within the physical and engineering sciences, it also has the potential to make huge contributions in the fields of arts and humanities.
@@ -265,13 +265,13 @@ Interestingly, but perhaps not surprisingly, in contexts that were annotated as 
 
 #### Sources and further reading
 
-- Living with Machines ([link to the Living with Machines 'About' page](https://livingwithmachines.ac.uk/about/))
-- MapReader: A Computer Vision Pipeline for the Semantic Exploration of Maps at Scale ([link to publication](https://doi.org/10.48550/arXiv.2111.15592))
-- DeezyMatch: A Flexible Deep Learning Approach to Fuzzy String Matching ([link to publication](https://aclanthology.org/2020.emnlp-demos.9.pdf))
-- Neural Language Models for Nineteenth-Century English ([link to publication](https://doi.org/10.48550/arXiv.2105.11321))
-- Living Machines: A study of *atypical* animacy ([link to publication](https://aclanthology.org/2020.coling-main.400.pdf))
-- The Living Machine: A Computational Approach to the Nineteenth-Century Language of Technology ([link to publication](https://muse.jhu.edu/pub/1/article/903976))
-- When Time Makes Sense: A Historically-Aware Approach to Targeted Sense Disambiguation ([link to publication](https://aclanthology.org/2021.findings-acl.243.pdf))
+- Living with Machines ([link to the Living with Machines 'About' page](https://livingwithmachines.ac.uk/about/){target="_blank"}).
+- MapReader: A Computer Vision Pipeline for the Semantic Exploration of Maps at Scale ([link to publication](https://doi.org/10.48550/arXiv.2111.15592){target="_blank"}).
+- DeezyMatch: A Flexible Deep Learning Approach to Fuzzy String Matching ([link to publication](https://aclanthology.org/2020.emnlp-demos.9.pdf){target="_blank"}).
+- Neural Language Models for Nineteenth-Century English ([link to publication](https://doi.org/10.48550/arXiv.2105.11321){target="_blank"}).
+- Living Machines: A study of *atypical* animacy ([link to publication](https://aclanthology.org/2020.coling-main.400.pdf){target="_blank"}).
+- The Living Machine: A Computational Approach to the Nineteenth-Century Language of Technology ([link to publication](https://muse.jhu.edu/pub/1/article/903976){target="_blank"}).
+- When Time Makes Sense: A Historically-Aware Approach to Targeted Sense Disambiguation ([link to publication](https://aclanthology.org/2021.findings-acl.243.pdf){target="_blank"}).
 
 ::::::::::::::::::::::::::::::::::::: callout
 
@@ -301,7 +301,7 @@ Often, this infrastructure is an HPC cluster.
 As such, AI and HPC are in a symbiotic relationship, where AI methods require HPC infrastructure to be implemented on the scale we see today and HPC is experiencing growth due to the pervasiveness and large compute demands of AI.
 
 ### Sources and further reading
-- Artificial Intelligence (AI) versus Machine Learning (ML) ([link to Google Cloud](https://cloud.google.com/learn/artificial-intelligence-vs-machine-learning))
+- Artificial Intelligence (AI) versus Machine Learning (ML) ([link to Google Cloud](https://cloud.google.com/learn/artificial-intelligence-vs-machine-learning){target="_blank"}).
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
