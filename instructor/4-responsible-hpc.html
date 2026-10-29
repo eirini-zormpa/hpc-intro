@@ -325,7 +325,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>How to use HPC resources responsibly</h1>
-        <p>Last updated on 2026-10-27 |
+        <p>Last updated on 2026-10-29 |
 
         <a href="hhttps://github.com/eirini-zormpa/hpc-intro/edit/main/episodes/4-responsible-hpc.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -373,14 +373,12 @@ shared resources, it’s important that all users are mindful of how their
 actions impact other users.</p>
 <p>In the following paragraphs, you will learn about some common
 considerations when using HPC facilities. These have been adapted from
-the <a href="https://carpentries-incubator.github.io/hpc-intro/18-resources.html" class="external-link">Using
-resources effectively</a> and [Using shared resources responsibly(<a href="https://carpentries-incubator.github.io/hpc-intro/19-responsibility.html" class="external-link uri">https://carpentries-incubator.github.io/hpc-intro/19-responsibility.html</a>)
-episodes of the HPC Carpentry lesson <a href="https://carpentries-incubator.github.io/hpc-intro/index.html" class="external-link">Using
-High-Performance Computing Systems</a> and you can find more detail
-there.</p>
+the <a href="https://carpentries-incubator.github.io/hpc-intro/18-resources.html" target="_blank" class="external-link">Using resources effectively</a> and <a href="https://carpentries-incubator.github.io/hpc-intro/19-responsibility.html" target="_blank" class="external-link">Using shared resources responsibly</a> episodes of the
+HPC Carpentry lesson <a href="https://carpentries-incubator.github.io/hpc-intro/index.html" target="_blank" class="external-link">Using High-Performance Computing Systems</a> and you can
+find more detail there.</p>
 <div class="section level3">
 <h3 id="make-code-efficient">Make code efficient<a class="anchor" aria-label="anchor" href="#make-code-efficient"></a></h3>
-<p>Code efficiency essentially means running that code for as few
+<p>Code efficiency essentially means running that code using as few
 resources as possible. Efficient code will generally run faster, saving
 costs on expensive compute time and freeing up the resource for others
 to use. It generally also uses less electricity, which helps keep the
@@ -389,6 +387,7 @@ following section).</p>
 <p>Writing efficient code is often tied to using good software
 engineering practice; if you are not sure how to do this, consider
 getting help from your local Research Software Engineering team.</p>
+<!-- explain why requesting too many AND too few resources is an issue-->
 <p>Once the code has been made as efficient as possible, it is important
 to be accurate in requesting resources to run it. That is, if the code
 runs in 2 hours over 4 nodes, it is important that this (or slightly
@@ -400,7 +399,7 @@ more) is how much resource you request.</p>
 and are reserved for specific actions, most importantly launching jobs.
 Running resource-intensive jobs (like doing heavy computations) should
 be avoided as it could negatively affect others’ ability to use the
-cluster.</p>
+cluster; these should only be run on compute nodes.</p>
 </div>
 <div class="section level3">
 <h3 id="test-code-before-scaling">Test code before scaling<a class="anchor" aria-label="anchor" href="#test-code-before-scaling"></a></h3>
@@ -428,9 +427,7 @@ and have led to long-term heating of Earth’s climate system. Without
 urgent and radical action, the Earth’s average temperature will rise by
 4-5 degrees Celsius by the end of the 21st century. This xkcd comic
 illustrates how extraordinary that is.</p>
-<figure><img src="https://imgs.xkcd.com/comics/4_5_degrees.png" class="figure mx-auto d-block"></figure><p>Credit: Randal Munroe of xkcd comics (<a href="https://xkcd.com/1379/" class="external-link uri">https://xkcd.com/1379/</a>),
-reshared under a <a href="https://creativecommons.org/licenses/by-nc/2.5/" class="external-link">CC-BY-NC
-licence</a>.</p>
+<figure><img src="https://imgs.xkcd.com/comics/4_5_degrees.png" class="figure mx-auto d-block"></figure><p>Credit: Randal Munroe of <a href="https://xkcd.com/1379/" target="_blank" class="external-link">xkcd comics</a>, reshared under a <a href="https://creativecommons.org/licenses/by-nc/2.5/" target="_blank" class="external-link">CC-BY-NC licence</a>.</p>
 <p>Although CO2 emissions are only part of the problem, they are what is
 most relevant to HPC and, as such, will be the focus of this
 section.</p>
@@ -475,7 +472,7 @@ emissions associated with its use would be downstream emissions.</p>
 emissions as much as possible. The environmental crisis we are facing
 will not be solved purely through individual action, but it is important
 to acknowledge that we each have a part to play. The most impactful
-think you can do is to mobilise - talk to people at your institution to
+thing you can do is to mobilise - talk to people at your institution to
 raise awareness and to change institutional practices in a way that
 minimises environmental cost.</p>
 <p>When it comes to embodied emissions, the people who can effect the
@@ -495,12 +492,11 @@ repairing instead of replacing them.</li>
 use of HPC and for which it is not necessary.</li>
 <li>Signpost researchers to training on how to make their code
 efficient.</li>
-<li>Advocate for your facility to get the <a href="https://www.software.ac.uk/GreenDiSC" class="external-link">Green DiSC
+<li>Advocate for your facility to get the <a href="https://www.software.ac.uk/GreenDiSC" target="_blank" class="external-link">Green DiSC
 certification</a>.</li>
-</ul><p>The content presented in this section was inspired by the <a href="https://imperialcollegelondon.github.io/digital_research_sustainability_training/index.html" class="external-link">Digital
-Research Sustainability lesson</a> created at Imperial College London
-and the <a href="https://epcced.github.io/2026-10-02_green-hpc_cambridge/instructor/index.html" class="external-link">Green
-Software Use on HPC lesson</a> created at EPCC.</p>
+</ul><p>The content presented in this section was inspired by the <a href="https://imperialcollegelondon.github.io/digital_research_sustainability_training/index.html" target="_blank" class="external-link">Digital Research Sustainability lesson</a> created at
+Imperial College London and the <a href="https://epcced.github.io/2026-10-02_green-hpc_cambridge/instructor/index.html" target="_blank" class="external-link">Green Software Use on HPC lesson</a> created at
+EPCC.</p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
@@ -566,8 +562,8 @@ any links that you are not going to use.
   "url": "https://eirini-zormpa.github.io/hpc-intro/instructor/4-responsible-hpc.html",
   "identifier": "https://eirini-zormpa.github.io/hpc-intro/instructor/4-responsible-hpc.html",
   "dateCreated": "2025-11-14",
-  "dateModified": "2026-10-27",
-  "datePublished": "2026-10-27"
+  "dateModified": "2026-10-29",
+  "datePublished": "2026-10-29"
 }
 
   </script><script>

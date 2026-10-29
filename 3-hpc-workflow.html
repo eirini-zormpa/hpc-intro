@@ -324,7 +324,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>What does an HPC workflow look like?</h1>
-        <p>Last updated on 2026-10-27 |
+        <p>Last updated on 2026-10-29 |
 
         <a href="hhttps://github.com/eirini-zormpa/hpc-intro/edit/main/episodes/3-hpc-workflow.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -371,18 +371,18 @@ to them through their institution. As research facilitators, you are
 likely one of the people who would help them with this! Researchers will
 generally have access to a local HPC facility, managed by their
 institution, a regional or national one. At the time of writing (late
-2026), the UK national supercomputing service is <a href="https://www.archer2.ac.uk/" class="external-link">ARCHER2</a>, hosted by EPCC. Examples
-of regional (Tier-2) HPC facilities in the UK are: <a href="https://www.baskerville.ac.uk/" class="external-link">Baskerville</a> and <a href="https://www.hpc.cam.ac.uk/high-performance-computing" class="external-link">CSD3</a>.
-Support with more explicitly AI projects is provided by <a href="https://docs.isambard.ac.uk/" class="external-link">IsembardAI</a>, hosted by the
-Bristol Centre for Supercomputing. A list of HPC facilities in the UK
-can be found on the <a href="https://www.hpc-uk.ac.uk/facilities/" class="external-link">HPC-UK website</a> and a
-list of what access different UK universities have to local and regional
-HPC facilities can be found on <a href="https://doi.org/10.5281/zenodo.21977720" class="external-link">Zenodo</a>. Note that
-this is a changing landscape, which will develop in accordance to the
-joint DSIT and UKRI policy paper on the <a href="https://www.gov.uk/government/publications/uk-compute-roadmap/uk-compute-roadmap" class="external-link">UK
-Compute Roadmap</a>. Once the researcher has identified a suitable HPC
-facility, they will need to follow that facility’s instructions on
-gaining access.</p>
+2026), the UK national supercomputing service is <a href="https://www.archer2.ac.uk/" target="_blank" class="external-link">ARCHER2</a>, hosted by
+EPCC. Examples of regional (Tier-2) HPC facilities in the UK are: <a href="https://www.baskerville.ac.uk/" target="_blank" class="external-link">Baskerville</a>
+and <a href="https://www.hpc.cam.ac.uk/high-performance-computing" target="_blank" class="external-link">CSD3</a>. Support with more explicitly AI projects is
+provided by <a href="https://docs.isambard.ac.uk/" target="_blank" class="external-link">IsembardAI</a>, hosted by the Bristol Centre for
+Supercomputing. A list of HPC facilities in the UK can be found on the
+<a href="https://www.hpc-uk.ac.uk/facilities/" target="_blank" class="external-link">HPC-UK
+website</a> and a list of what access different UK universities have to
+local and regional HPC facilities can be found on <a href="https://doi.org/10.5281/zenodo.21977720" target="_blank" class="external-link">Zenodo</a>. Note that this is a changing landscape,
+which will develop in accordance to the joint DSIT and UKRI policy paper
+on the <a href="https://www.gov.uk/government/publications/uk-compute-roadmap/uk-compute-roadmap" target="_blank" class="external-link">UK Compute Roadmap</a>. Once the researcher has
+identified a suitable HPC facility, they will need to follow that
+facility’s instructions on gaining access.</p>
 </div>
 <div class="section level3">
 <h3 id="logging-in">Logging in<a class="anchor" aria-label="anchor" href="#logging-in"></a></h3>
@@ -404,8 +404,7 @@ choice and type the following:</p>
 </div>
 <p>We are now in the dedicated login node that was mentioned in the
 previous episode!</p>
-<p>For more information, please refer to the HPC Carpentry episode on <a href="https://carpentries-incubator.github.io/hpc-intro/11-connecting.html" class="external-link">Connecting
-Securely to an HPC Cluster</a>.</p>
+<p>For more information, please refer to the HPC Carpentry episode on <a href="https://carpentries-incubator.github.io/hpc-intro/11-connecting.html" target="_blank" class="external-link">Connecting Securely to an HPC Cluster</a>.</p>
 </div>
 <div class="section level3">
 <h3 id="transferring-files">Transferring files<a class="anchor" aria-label="anchor" href="#transferring-files"></a></h3>
@@ -425,8 +424,8 @@ which stands for “secure copy”.</p>
 <p>A more advanced option is <code>rsync</code> which allows you to
 transfer large files more quickly than <code>scp</code>.</p>
 <p>For more information, please refer to the “Transferring Files with
-Remote Computers” episode, specifically from the section <a href="https://carpentries-incubator.github.io/hpc-intro/16-transferring-files.html#transferring-single-files-and-folders-with-scp" class="external-link">Transferring
-Single Files and Folders with scp</a> onwards.</p>
+Remote Computers” episode, specifically from the section <a href="https://carpentries-incubator.github.io/hpc-intro/16-transferring-files.html#transferring-single-files-and-folders-with-scp" target="_blank" class="external-link">Transferring Single Files and Folders with scp</a>
+onwards.</p>
 <!-- would this be a good place to talk about back-ups?-->
 </div>
 <div class="section level3">
@@ -438,18 +437,19 @@ approaches to how they turn human-readable instructions to
 machine-readable ones, leading to the distinction between
 <em>compiled</em> languages and <em>interpreted</em> ones. In compiled
 languages (like C, C++ and Fortran), a distinct step is required after
-the code being written and before it is executed. During compilation,
-the human-readable instructions are turned to binary code (1s and 0s)
-that the computer can read. Interpreted languages (like Python, R, and
+the code is written and before it is executed. During compilation, the
+human-readable instructions are turned to binary code (1s and 0s) that
+the computer can read. Interpreted languages (like Python, R, and
 MATLAB) are interpreted while they are being run and do not require a
 separate step. However, compiled languages are significantly faster to
-run, which becomes only more important in HPC systems that rely on
+run, which becomes more important in HPC systems that rely on
 efficiency. Thankfully, it is possible to use wrappers around
 interpreted languages, which allows researchers to write their code in,
 for example, Python and still run it on an HPC cluster in an efficient
-manner.</p>
-<p>For more information, please refer to the <a href="https://learning.rc.virginia.edu/notes/building-running-c-cpp-fortran/" class="external-link">Building
-and Running C/C++/Fortran Codes on HPC Systems</a> lesson.</p>
+manner. Each language will have its own way of using wrappers, so please
+refer to the documentation of your preferred language.</p>
+<p>For more information, please refer to the <a href="https://learning.rc.virginia.edu/notes/building-running-c-cpp-fortran/" target="_blank" class="external-link">Building and Running C/C++/Fortran Codes on HPC
+Systems</a> lesson.</p>
 </div>
 <div class="section level3">
 <h3 id="submitting-a-job-to-the-cluster">Submitting a job to the cluster<a class="anchor" aria-label="anchor" href="#submitting-a-job-to-the-cluster"></a></h3>
@@ -533,8 +533,8 @@ any links that you are not going to use.
   "url": "https://eirini-zormpa.github.io/hpc-intro/3-hpc-workflow.html",
   "identifier": "https://eirini-zormpa.github.io/hpc-intro/3-hpc-workflow.html",
   "dateCreated": "2025-11-14",
-  "dateModified": "2026-10-27",
-  "datePublished": "2026-10-27"
+  "dateModified": "2026-10-29",
+  "datePublished": "2026-10-29"
 }
 
   </script><script>
