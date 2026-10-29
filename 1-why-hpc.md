@@ -80,6 +80,8 @@ In each of the four following scenarios, does the researcher need access to HPC 
 
 Let's now look at some specific cases in which the use of an HPC cluster enabled impactful research.
 
+::: tab
+
 ### Case study 1: Physics
 
 Most of us will remember the excitement that surrounded the release of the first image of a black hole, captured in 2019.
@@ -88,7 +90,7 @@ The existence of black holes was first posited over a century ago but, while the
 HPC underlies multiple of the steps involved in creating these images,
 images which provide strong evidence for Einstein's theory of general relativity and have implications for our understanding of the universe.
 
-#### Why study black holes?
+**Why study black holes?**
 
 Black holes are extreme regions of space, where it appears that both general relativity and quantum physics play a role.
 General relativity does a good job of explaining the gravitation of very large objects and led to the discovery of the Big Bang.
@@ -124,7 +126,8 @@ It should also be mentioned that the face tied to this discovery was that of Dr 
 
 ![Image of the black hole SgrA*, from the [Event Horizon Telescope website.](https://eventhorizontelescope.org/blog/astronomers-reveal-first-image-black-hole-heart-our-galaxy)](files/black-hole-sgra.png)
 
-#### How did HPC contribute?
+**How did HPC contribute?**
+
 HPC was essential at every stage of this project.
 First of all, the data involved in generating these images is incredibly large.
 Remember that the Event Horizon Telescope is a global network of radio observatories operating together through very-long-baseline interferometry.
@@ -138,7 +141,8 @@ Independent teams also used different computational imaging methods to verify th
 The calculations supporting such theoretical work was undertaken using supercomputers located around the world, such as the German Tier-0 systems SuperMUC in Garching and the American NSF Frontera supercomputer and Open Science Grid.
 A statistic that does a great job of illustrating the magnitude of computing power necessary for this work is that a single analysis, done as part of verifying the SgrA* image, required 100 million CPU hours, spread across the two aforementioned NSF supercomputers.
 
-#### Sources and further reading
+**Sources and further reading**
+
 - Press release (April 10, 2019): Astronomers Capture First Image of a Black Hole ([link to press release on EHT website](https://eventhorizontelescope.org/press-release-april-10-2019-astronomers-capture-first-image-black-hole){target="_blank"}).
 - Why is it important to study black holes? What is there to learn from the EHT observations? ([link to the Event Horizon Telescape FAQ](https://eventhorizontelescope.org/faq/why-it-important-study-black-holes-what-there-be-learned-eht-observations){target="_blank"}).
 - How much data is recorded during an observation and how is it transferred to the central processing facilities? ([link to the Event Horizon Telescape FAQ](https://eventhorizontelescope.org/faq){target="_blank"}).
@@ -151,7 +155,8 @@ A statistic that does a great job of illustrating the magnitude of computing pow
 Another well-publicised piece of research that made heavy use of HPC is AlphaFold.
 AlphaFold is a machine learning model that is highly accurate in predicting the 3D structure of proteins.
 
-#### What do proteins do?
+**What do proteins do?**
+
 Proteins underpin life.
 Although proteins can be represented as a linear sequence of amino acids, their function depends on how they fold, i.e. their precise 3D structure.
 Insights into the structure, and thus the function of a protein is critical for understanding biological processes, from diseases that affect humans to bacteria that are found in our environment.
@@ -169,7 +174,8 @@ The AlphaFold 2 system was announced as being equally accurate to experimental m
 
 ![An artist's illustration of AI used in protein folding [Google DeepMind on Unsplash.](https://unsplash.com/photos/an-image-of-a-cell-phone-with-a-blue-background-htMw1CbMUIk)](files/ai-protein.jpg)
 
-#### How did HPC contribute?
+**How did HPC contribute?**
+
 The use of HPC was fundamental in the development of AlphaFold and remains important for its use.
 In developing AlphaFold, both large amounts of data and complex resource-intensive software was required.
 Starting with data, AlphaFold was trained on very large biological datasets: Specifically on the experimentally-determined 3D structures of proteins in the [Protein Data Bank](https://www.wwpdb.org/){target="_blank"} and their corresponding amino acid sequences in [UniProt](https://www.uniprot.org/){target="_blank"}.
@@ -189,7 +195,7 @@ Even with this level of parallelism, a single training run took about 5 days to 
 Even after it's trained, AlphaFold typically requires HPC to generate predictions of protein structure.
 For example, the installation instructions on the AlphaFold GitHub repository assume the existence of multiple GPUs. 
 
-#### Sources and further reading
+**Sources and further reading**
 
 - Improved protein structure prediction using potentials from deep learning ([link to academic publication on AlphaFold 2](https://doi.org/10.1038/s41586-019-1923-7){target="_blank"}).
 - AlphaFold uses open data and AI to discover the 3D protein universe ([link to blog post on EMBL.org](https://www.embl.org/news/science/alphafold-using-open-data-and-ai-to-discover-the-3d-protein-universe){target="_blank"}).
@@ -203,7 +209,8 @@ An example of a large-scale project that used advanced computing in the digital 
 
 Living with Machines brough together huge datasets of digitised historical documents and computational tools to study the Industrial Revolution which took place in Britain from the late 18th to the early 20th century.
 
-#### Why is the Industrial Revolution important?
+**Why is the Industrial Revolution important?**
+
 The Industrial Revolution is a hugely important historical period, the consequences of which were felt around the world, though it impacted Britain and other Western countries first.
 Gaining a better understanding of this period, for example studying the impacts of technological advancement and mechanisation on people and places, is valuable historical work in and of itself.
 Doing so at a time when AI is, depending on your perspective, promising or threatening to change the way we work and create art is especially pertinent.
@@ -212,12 +219,12 @@ The tools that the Living with Machines project created, e.g. for parsing maps, 
 
 ![D. Napier & Son Ltd, 'Aero Engine in the Making', England, circa 1918. [Shared by Museums Victoria on Unsplash](https://unsplash.com/photos/grayscale-photography-of-man-facing-mechanical-machine-9Prj6M-JAaA)](files/industrial-revolution.jpg)
 
-#### How did HPC contribute?
+**How did HPC contribute?**
 
 Living with Machines encompassed a large number of projects, many of which used HPC and some that did not.
 Below we explore three tools that were developed as part of the project which did use HPC.
 
-##### MapReader
+*MapReader*
 
 The first tool we'll look at is `MapReader`, a free open-source Python library using computer vision methods to analyse scanned or born-digital maps.
 One of the innovations introduced by this tool is that annotation was carried out not at the level of the pixel, but rather of the "patch", a flexible and meaningful semantic unit. 
@@ -231,7 +238,7 @@ A subset of 62,020 manually annotated patches was used to train, validate, and t
 After a model was selected and finetuned, it was used for model inference on all 30,490,411 patches in the UK.
 This took four NVIDIA Tesla K80 GPUs approximately 172 GPU hours.
 
-##### DeezyMatch
+*DeezyMatch*
 
 `DeezyMatch` is also a free open-source Python library, this one used for string matching in historical documents.
 *String matching* refers to the process of matching strings (words) to a knowledge base to facilitate Natural Language Processing (NLP).
@@ -244,7 +251,7 @@ It also does not require a model to be trained from scratch, but rather finetune
 A test case presented for `DeezyMatch` is its ability to correctly identify place names.
 In this case, HPC was used to preprocess the data and train the models (28 GPU or 54 CPU minutes) and then to generate and combine the candidate vectors, meaning the places likely referred to in the text (39 GPU or 204 CPU minutes).
 
-##### Neural language models for 19th century English
+*Neural language models for 19th century English*
 
 Living with Machines also released four types of neural language models trained on 19th century English.
 The data used for this was 47,685 books published between 1760 and 1900.
@@ -263,7 +270,7 @@ On a basic level, this line of inquiry can capture the implicit and changing att
 On a deeper level, it can tell us about how animate and/or human machines were perceived to be, with implications about how much empathy people might extend to them.
 Interestingly, but perhaps not surprisingly, in contexts that were annotated as high in animacy but low in humanness, the 19th century models would sometimes predict the word "slave" instead of "machine".
 
-#### Sources and further reading
+**Sources and further reading**
 
 - Living with Machines ([link to the Living with Machines 'About' page](https://livingwithmachines.ac.uk/about/){target="_blank"}).
 - MapReader: A Computer Vision Pipeline for the Semantic Exploration of Maps at Scale ([link to publication](https://doi.org/10.48550/arXiv.2111.15592){target="_blank"}).
@@ -272,6 +279,8 @@ Interestingly, but perhaps not surprisingly, in contexts that were annotated as 
 - Living Machines: A study of *atypical* animacy ([link to publication](https://aclanthology.org/2020.coling-main.400.pdf){target="_blank"}).
 - The Living Machine: A Computational Approach to the Nineteenth-Century Language of Technology ([link to publication](https://muse.jhu.edu/pub/1/article/903976){target="_blank"}).
 - When Time Makes Sense: A Historically-Aware Approach to Targeted Sense Disambiguation ([link to publication](https://aclanthology.org/2021.findings-acl.243.pdf){target="_blank"}).
+
+:::
 
 ::::::::::::::::::::::::::::::::::::: callout
 
