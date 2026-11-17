@@ -27,7 +27,7 @@ HPC facilities are used by a large number of people.
 Like with all shared resources, it's important that all users are mindful of how their actions impact other users.
 
 In the following paragraphs, you will learn about some common considerations when using HPC facilities.
-These have been adapted from the [Using resources effectively](https://carpentries-incubator.github.io/hpc-intro/18-resources.html){target="_blank"} and [Using shared resources responsibly](https://carpentries-incubator.github.io/hpc-intro/19-responsibility.html){target="_blank"} episodes of the HPC Carpentry lesson [Using High-Performance Computing Systems](https://carpentries-incubator.github.io/hpc-intro/index.html){target="_blank"} and you can find more detail there.
+These have been adapted from the [Using resources effectively](https://hpc-carpentry.github.io/hpc-intro/18-resources.html){target="_blank"} and [Using shared resources responsibly](https://hpc-carpentry.github.io/hpc-intro/19-responsibility.html){target="_blank"} episodes of the HPC Carpentry lesson [Using High-Performance Computing Systems](https://hpc-carpentry.github.io/hpc-intro/index.html){target="_blank"} and you can find more detail there.
 
 ### Make code efficient
 Code efficiency essentially means running that code using as few resources as possible.
@@ -68,13 +68,28 @@ This xkcd comic illustrates how extraordinary that is.
 Credit: Randal Munroe of [xkcd comics](https://xkcd.com/1379/){target="_blank"}, reshared under a [CC-BY-NC licence](https://creativecommons.org/licenses/by-nc/2.5/){target="_blank"}.
 
 Although CO2 emissions are only part of the problem, they are what is most relevant to HPC and, as such, will be the focus of this section.
+We highly recommend the [UKRI Net Zero DRI Scoping Project final technical report](https://doi.org/10.5281/zenodo.8199984){target="_blank"} for estimates of emissions specific to DRI and recommendations specific to the UK academic context.
 
 ::::::::::::::::::::::::::::::::::::: callout
 
-## Net zero and carbon neutral
+## Emission reduction and offsetting
 
-Eliminating emissions is more important and more impactful than neutralising them.
+Reducing emissions (i.e. releasing fewer greenhouse gases) and offsetting emissions (i.e. taking action to remove emissions, like planting trees) are both important strategies for reaching Net Zero goals.
+To put it plainly, the amount of greenhouse gases we are emitting is untenable and needs to be dramatically reduced; because we will still need to emit _some_ greenhouse gases, those will have to be offset.
+Crucially, emissions need to be drastically reduced at the same time as some emissions are offset.
+We must not see offsetting as an excuse to keep emitting greenhouse gases as we have been.
 
+This becomes only more important considering the various scandals from the past few years, exposing that offset credits, often used by corporations, do not represent genuine carbon reductions.
+For excellent reporting on one of those scandals, you can refer to the Guardian article linked in the Further reading section.
+This specific case looked at projects aiming to reduce deforestation, but projects focusing on tree planting come with their own problems: the trees planted may be monocultures, contributing little to the biodiversity of the areas in which they are planted, or they may not be suited to the climate of the area where they are planted, dying shortly after being planted or upsetting the ecosystem in which they are introduced.
+
+In summary, both reduction and offsetting are important tools if we are to achieve Net Zero, but we need to be aware of the threat of greenwashing which has plagued some offsetting schemes.
+
+### Sources and further reading:
+
+- Revealed: more than 90% of rainforest carbon offses by biggest certifier are worthless, analysis shows [link to article on the Guardian website](https://www.theguardian.com/environment/2023/jan/18/revealed-forest-carbon-offsets-biggest-provider-worthless-verra-aoe){target="_blank"}
+- Greenwashing: corporate tree planting generates goodwill but may sometimes harm the planet[link to article on the Conversation  website](https://theconversation.com/greenwashing-corporate-tree-planting-generates-goodwill-but-may-sometimes-harm-the-planet-103457){target="_blank"}
+- Addressing scandals and greenwashing in carbon offset markets: A framework for reform [link to academic article by Sasaki (2025) on ScienceDirect](https://doi.org/10.1016/j.glt.2025.06.003)
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 We can think about emissions as they relate to different stages of HPC usage:

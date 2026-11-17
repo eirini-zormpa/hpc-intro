@@ -16,7 +16,7 @@ We consulted a number of resources and training materials in designing and creat
 We are very grateful to the authors of these materials, both for creating them and for making them publicly available.
 Below is a list of those materials.
 
-- HPC Carpentry. (n.d.). Using High-Performance Computing Systems. https://carpentries-incubator.github.io/hpc-intro/
+- HPC Carpentry. (n.d.). Using High-Performance Computing Systems. https://hpc-carpentry.github.io/hpc-intro/
 - Richings, J., Farr, S., Farsarakis, M., Henty, D., & Filinger, W. (2023). Introduction to High Performance Computing. https://epcced.github.io/Intro-to-HPC/
 - Sauze, C. (2019). Introduction to High Performance Computing with Raspberry Pi. https://scw-aberystwyth.github.io/Introduction-to-HPC-with-RaspberryPi
 - Tavares, H., & Kalmár, L. (2024). Working on HPC Clusters using SLURM. https://cambiotraining.github.io/hpc-intro
