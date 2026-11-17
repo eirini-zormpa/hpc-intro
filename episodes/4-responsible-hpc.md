@@ -27,7 +27,7 @@ HPC facilities are used by a large number of people.
 Like with all shared resources, it's important that all users are mindful of how their actions impact other users.
 
 In the following paragraphs, you will learn about some common considerations when using HPC facilities.
-These have been adapted from the [Using resources effectively](https://carpentries-incubator.github.io/hpc-intro/18-resources.html){target="_blank"} and [Using shared resources responsibly](https://carpentries-incubator.github.io/hpc-intro/19-responsibility.html){target="_blank"} episodes of the HPC Carpentry lesson [Using High-Performance Computing Systems](https://carpentries-incubator.github.io/hpc-intro/index.html){target="_blank"} and you can find more detail there.
+These have been adapted from the [Using resources effectively](https://hpc-carpentry.github.io/hpc-intro/18-resources.html){target="_blank"} and [Using shared resources responsibly](https://hpc-carpentry.github.io/hpc-intro/19-responsibility.html){target="_blank"} episodes of the HPC Carpentry lesson [Using High-Performance Computing Systems](https://hpc-carpentry.github.io/hpc-intro/index.html){target="_blank"} and you can find more detail there.
 
 ### Make code efficient
 Code efficiency essentially means running that code using as few resources as possible.

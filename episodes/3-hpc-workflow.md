@@ -53,7 +53,7 @@ ssh [whatever the name ends up being]
 
 We are now in the dedicated login node that was mentioned in the previous episode! 
 
-For more information, please refer to the HPC Carpentry episode on [Connecting Securely to an HPC Cluster](https://carpentries-incubator.github.io/hpc-intro/11-connecting.html){target="_blank"}.
+For more information, please refer to the HPC Carpentry episode on [Connecting Securely to an HPC Cluster](https://hpc-carpentry.github.io/hpc-intro/11-connecting.html){target="_blank"}.
 
 ### Transferring files
 
@@ -70,7 +70,7 @@ local$ scp local_file user@cluster.name:remote_destination
 
 A more advanced option is `rsync` which allows you to transfer large files more quickly than `scp`.
 
-For more information, please refer to the "Transferring Files with Remote Computers" episode, specifically from the section [Transferring Single Files and Folders with scp](https://carpentries-incubator.github.io/hpc-intro/16-transferring-files.html#transferring-single-files-and-folders-with-scp){target="_blank"} onwards.
+For more information, please refer to the "Transferring Files with Remote Computers" episode, specifically from the section [Transferring Single Files and Folders with scp](https://hpc-carpentry.github.io/hpc-intro/16-transferring-files.html#transferring-single-files-and-folders-with-scp){target="_blank"} onwards.
 
 <!-- would this be a good place to talk about back-ups?-->
 
